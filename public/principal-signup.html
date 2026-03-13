@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | Principal Signup</title>
+  <link rel="stylesheet" href="./css/principal-signup.css" />
+</head>
+<body>
+  <div class="page">
+    <section class="left-panel">
+      <div class="brand">
+        <div class="brand-icon">✦</div>
+        <span>Tiny2Wise</span>
+      </div>
+
+      <div class="hero-copy">
+        <h1>Empowering Educators,<br />Elevating Excellence.</h1>
+        <p>
+          Join the AI-powered platform designed specifically for modern
+          school management and linguistic excellence.
+        </p>
+      </div>
+
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">▣</div>
+          <div>
+            <h3>AI-Powered Speech Tracking</h3>
+            <p>Monitor student linguistic milestones effortlessly with advanced AI tools.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">☷</div>
+          <div>
+            <h3>Automated PTM Scheduling</h3>
+            <p>Save hours on parent-teacher meeting coordination with smart automation.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">◌</div>
+          <div>
+            <h3>Bank-Grade Security</h3>
+            <p>Your school's data is encrypted and protected with industry-leading protocols.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-note">© 2024 Tiny2Wise Educational Technologies. All rights reserved.</div>
+    </section>
+
+    <section class="right-panel">
+      <div class="form-wrap">
+        <h2>Create Principal Account</h2>
+        <p class="subtext">
+          Enter your professional details to get started with your school dashboard.
+        </p>
+
+        <form id="principalSignupForm" novalidate>
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="e.g. Dr. Sarah Jenkins" />
+            <small class="error-text" id="fullNameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="schoolName">School Name</label>
+            <input type="text" id="schoolName" name="schoolName" placeholder="Enter the name of your institution" />
+            <small class="error-text" id="schoolNameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="officialEmail">Official Email Address</label>
+            <input type="email" id="officialEmail" name="officialEmail" placeholder="principal@yourschool.edu" />
+            <small class="error-text" id="officialEmailError"></small>
+          </div>
+
+          <div class="row two-col">
+            <div class="form-group">
+              <label for="contactNumber">Contact Number</label>
+              <input type="text" id="contactNumber" name="contactNumber" placeholder="+1 (555) 000-0000" />
+              <small class="error-text" id="contactNumberError"></small>
+            </div>
+
+            <div class="form-group password-wrap">
+              <label for="password">Password</label>
+              <div class="password-box">
+                <input type="password" id="password" name="password" placeholder="••••••••" />
+                <button type="button" id="togglePassword" class="toggle-password" aria-label="Toggle password visibility">
+                  👁
+                </button>
+              </div>
+              <small class="error-text" id="passwordError"></small>
+            </div>
+          </div>
+
+          <div class="terms">
+            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn">
+            Create Principal Account
+          </button>
+
+          <p class="login-text">
+            Already have an account? <a href="#">Log in</a>
+          </p>
+
+          <div class="secure-text">⌁ Secure & encrypted platform</div>
+
+          <div id="formMessage" class="form-message"></div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <script src="./js/principal-signup.js"></script>
+</body>
+</html>
