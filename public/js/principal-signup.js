@@ -1,3 +1,5 @@
+const API_BASE_URL = "http://localhost:5000";
+
 const form = document.getElementById("principalSignupForm");
 const submitBtn = document.getElementById("submitBtn");
 const messageBox = document.getElementById("formMessage");
@@ -97,7 +99,7 @@ form.addEventListener("submit", async (e) => {
     submitBtn.disabled = true;
     submitBtn.textContent = "Creating Account...";
 
-    const response = await fetch("/api/principal-auth/signup", {
+    const response = await fetch(`${API_BASE_URL}/api/principal-auth/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -116,14 +118,14 @@ form.addEventListener("submit", async (e) => {
 
     messageBox.className = "form-message success";
     messageBox.style.display = "block";
-    messageBox.textContent = result.message;
+    messageBox.textContent = result.message || "Principal account created successfully.";
 
     form.reset();
   } catch (error) {
+    console.error("Frontend fetch error:", error);
     messageBox.className = "form-message error";
     messageBox.style.display = "block";
     messageBox.textContent = "Unable to connect to server.";
-    console.error(error);
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = "Create Principal Account";

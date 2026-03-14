@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f5f7;
+  min-height: 100vh;
+}
+
+.signin-page {
+  min-height: 100vh;
+  display: flex;
+}
+
+.left-side {
+  width: 50%;
+  position: relative;
+  background:
+    linear-gradient(rgba(19, 75, 58, 0.58), rgba(19, 75, 58, 0.58)),
+    url("https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=1200&q=80")
+      center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 40px 30px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(19, 75, 58, 0.2);
+}
+
+.left-content {
+  position: relative;
+  z-index: 2;
+  max-width: 470px;
+  color: #ffffff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.brand-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: #17e97f;
+  color: #07311f;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.left-content h1 {
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.left-content p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #eef8f2;
+  max-width: 410px;
+}
+
+.right-side {
+  width: 50%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.signin-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.signin-card h2 {
+  font-size: 24px;
+  color: #18202f;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #7b8393;
+  margin-bottom: 22px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #18202f;
+}
+
+.label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.forgot-link {
+  font-size: 12px;
+  color: #10d46d;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #dde2e8;
+  border-radius: 10px;
+  padding: 0 42px 0 14px;
+  font-size: 14px;
+  color: #18202f;
+  outline: none;
+  transition: 0.2s ease;
+  background: #fff;
+}
+
+.input-wrap input:focus {
+  border-color: #12e67e;
+  box-shadow: 0 0 0 3px rgba(18, 230, 126, 0.12);
+}
+
+.input-icon,
+.icon-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #98a1af;
+  font-size: 14px;
+}
+
+.icon-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.remember-row {
+  margin: 8px 0 18px;
+}
+
+.remember-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.remember-label input {
+  width: 14px;
+  height: 14px;
+}
+
+.signin-btn {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 10px;
+  background: #15e97f;
+  color: #041c12;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.signin-btn:hover {
+  filter: brightness(0.98);
+  transform: translateY(-1px);
+}
+
+.signin-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-message {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  display: none;
+  font-size: 14px;
+}
+
+.form-message.success {
+  display: block;
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.form-message.error {
+  display: block;
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.error-text {
+  display: block;
+  min-height: 14px;
+  font-size: 12px;
+  color: #dc2626;
+  margin-top: 6px;
+}
+
+.footer-links {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 11px;
+  color: #8a92a2;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #8a92a2;
+}
+
+@media (max-width: 960px) {
+  .signin-page {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+  }
+
+  .left-side {
+    min-height: 320px;
+  }
+}

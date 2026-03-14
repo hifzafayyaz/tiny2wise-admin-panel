@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | Principal Sign In</title>
+  <link rel="stylesheet" href="./css/principal-signin.css" />
+</head>
+<body>
+  <div class="signin-page">
+    <div class="left-side">
+      <div class="overlay"></div>
+      <div class="left-content">
+        <div class="brand">
+          <div class="brand-icon">✦</div>
+          <span>Tiny2Wise</span>
+        </div>
+
+        <h1>Empowering Educators,<br />Shaping Futures.</h1>
+        <p>
+          A centralized portal designed for System Admins and Principals to
+          manage, monitor, and master the educational journey.
+        </p>
+      </div>
+    </div>
+
+    <div class="right-side">
+      <div class="signin-card">
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Please enter your credentials to access the portal.</p>
+
+        <form id="principalSigninForm" novalidate>
+          <div class="form-group">
+            <label for="officialEmail">Email Address</label>
+            <div class="input-wrap with-icon">
+              <input
+                type="email"
+                id="officialEmail"
+                name="officialEmail"
+                placeholder="e.g., admin@tiny2wise.com"
+              />
+              <span class="input-icon">✉</span>
+            </div>
+            <small class="error-text" id="officialEmailError"></small>
+          </div>
+
+          <div class="form-group">
+            <div class="label-row">
+              <label for="password">Password</label>
+              <a href="#" class="forgot-link">Forgot Password?</a>
+            </div>
+
+            <div class="input-wrap with-icon">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="••••••••"
+              />
+              <button type="button" id="togglePassword" class="icon-btn" aria-label="Toggle password visibility">
+                👁
+              </button>
+            </div>
+            <small class="error-text" id="passwordError"></small>
+          </div>
+
+          <div class="remember-row">
+            <label class="remember-label">
+              <input type="checkbox" id="rememberMe" />
+              <span>Remember this device</span>
+            </label>
+          </div>
+
+          <button type="submit" class="signin-btn" id="signinBtn">Sign In</button>
+
+          <div id="formMessage" class="form-message"></div>
+
+          <div class="footer-links">
+            <a href="#">Support</a>
+            <a href="#">Privacy Policy</a>
+            <span>© 2024 Tiny2Wise. All rights reserved.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/principal-signin.js"></script>
+</body>
+</html>
