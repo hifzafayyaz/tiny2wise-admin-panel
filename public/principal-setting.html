@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | Principal Configuration</title>
+  <link rel="stylesheet" href="./css/principal-setting.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">▣</div>
+
+        <div>
+          <h1>Tiny2Wise</h1>
+          <p>Principal Dashboard</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="principal-dashboard.html" class="nav-link">
+          <span>⌂</span>Dashboard
+        </a>
+
+        <a href="principal-teacher.html" class="nav-link">
+          <span>♙</span>Teacher
+        </a>
+
+        <a href="principal-classes.html" class="nav-link">
+          <span>▱</span>Classes and Students
+        </a>
+
+        <a href="principal-ptm.html" class="nav-link">
+          <span>☷</span>PTM Management
+        </a>
+
+        <a href="principal-setting.html" class="nav-link active">
+          <span>⚙</span>Setting
+        </a>
+      </nav>
+
+      <div class="principal-mini-card">
+        <div class="avatar" id="sidebarInitials">DA</div>
+
+        <div class="principal-text">
+          <strong id="sidebarName">Dr. Adnan</strong>
+          <span>Principal</span>
+        </div>
+
+        <button class="logout-icon" id="logoutBtn" type="button">⇥</button>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button">☰</button>
+
+        <div class="page-title">
+          <h2>Principal Configuration</h2>
+          <p>Manage school settings, notifications, and security preferences</p>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search students, teachers..." />
+          </label>
+
+          <button class="icon-button notification" type="button">♢</button>
+          <button class="icon-button" type="button">⚙</button>
+        </div>
+      </header>
+
+      <section class="setting-page">
+        <div class="breadcrumb">
+          Principal Dashboard <span>›</span> School Management <span>›</span>
+          <strong>Principal Configuration</strong>
+        </div>
+
+        <div class="setting-heading">
+          <h1>Principal Configuration</h1>
+          <p>Manage school settings, notifications, and security preferences</p>
+        </div>
+
+        <section class="setting-grid">
+          <div class="left-column">
+            <article class="settings-card profile-card">
+              <div class="card-heading">
+                <h3>School Profile</h3>
+                <button class="edit-btn" type="button">⌕</button>
+              </div>
+
+              <form id="profileForm">
+                <label>
+                  School Name
+                  <input type="text" value="Giggles and Growth Montessori School" />
+                </label>
+
+                <label>
+                  School ID
+                  <input type="text" value="GIS-2024-001" />
+                </label>
+
+                <label>
+                  Address
+                  <textarea>C 36-2 Main Boulevard, Sector M7 Lake City, Lahore, 54790</textarea>
+                </label>
+
+                <button class="green-btn" type="submit">Update Profile</button>
+
+                <p class="success-message" id="profileMessage"></p>
+              </form>
+            </article>
+
+            <article class="settings-card notification-card">
+              <h3>Notification Preferences</h3>
+
+              <div class="preference-block">
+                <h4>PTM Meeting Alerts</h4>
+                <p>Get notified about upcoming parent-teacher meetings</p>
+
+                <div class="toggle-row">
+                  <span>Email</span>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider"></span>
+                  </label>
+
+                  <span>App</span>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="preference-block">
+                <h4>Accuracy Drops</h4>
+                <p>Alerts when student performance drops below threshold</p>
+
+                <div class="toggle-row">
+                  <span>Email</span>
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider"></span>
+                  </label>
+
+                  <span>App</span>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="right-column">
+            <article class="settings-card calendar-card">
+              <h3>Academic Calendar</h3>
+
+              <form id="calendarForm">
+                <label>
+                  Semester Start Date
+                  <input type="date" value="2024-01-15" />
+                </label>
+
+                <label>
+                  Semester End Date
+                  <input type="date" value="2024-06-30" />
+                </label>
+
+                <button class="outline-btn" type="button">＋ Add Holiday</button>
+
+                <p class="success-message" id="calendarMessage"></p>
+              </form>
+            </article>
+
+            <article class="settings-card security-card">
+              <h3>Security Settings</h3>
+
+              <form id="securityForm">
+                <h4>Change Password</h4>
+
+                <label>
+                  Current Password
+                  <input type="password" placeholder="Enter current password" />
+                </label>
+
+                <label>
+                  New Password
+                  <input type="password" placeholder="Enter new password" />
+                </label>
+
+                <label>
+                  Confirm Password
+                  <input type="password" placeholder="Confirm new password" />
+                </label>
+
+                <div class="two-factor-row">
+                  <div>
+                    <h4>Two Factor Authentication</h4>
+                    <p>Add an extra layer of security to your account</p>
+                  </div>
+
+                  <label class="switch">
+                    <input type="checkbox" id="twoFactorToggle" />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+
+                <div class="status-box" id="twoFactorStatus">Status: Disabled</div>
+
+                <button class="green-btn security-submit" type="submit">
+                  Update Security Settings
+                </button>
+
+                <p class="success-message" id="securityMessage"></p>
+              </form>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/principal-setting.js"></script>
+</body>
+</html>
