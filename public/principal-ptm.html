@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | PTM Management</title>
+  <link rel="stylesheet" href="./css/principal-ptm.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">▣</div>
+
+        <div>
+          <h1>Tiny2Wise</h1>
+          <p>Principal Dashboard</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="principal-dashboard.html" class="nav-link">
+          <span>⌂</span>Dashboard
+        </a>
+
+        <a href="principal-teacher.html" class="nav-link">
+          <span>♙</span>Teacher
+        </a>
+
+        <a href="principal-classes.html" class="nav-link">
+          <span>▱</span>Classes and Students
+        </a>
+
+        <a href="principal-ptm.html" class="nav-link active">
+          <span>☷</span>PTM Management
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>⚙</span>Setting
+        </a>
+      </nav>
+
+      <div class="principal-mini-card">
+        <div class="avatar" id="sidebarInitials">DA</div>
+
+        <div class="principal-text">
+          <strong id="sidebarName">Dr. Adnan</strong>
+          <span>Principal</span>
+        </div>
+
+        <button class="logout-icon" id="logoutBtn" type="button">⇥</button>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button">☰</button>
+
+        <div class="page-title">
+          <h2>Parent-Teacher Meetings</h2>
+          <p>Schedule and manage parent-teacher meetings</p>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search students, teachers..." />
+          </label>
+
+          <button class="icon-button notification" type="button">♢</button>
+          <button class="icon-button" type="button">⚙</button>
+        </div>
+      </header>
+
+      <section class="ptm-page">
+        <div class="breadcrumb">
+          Principal Dashboard <span>›</span> School Management <span>›</span>
+          <strong>PTM Management</strong>
+        </div>
+
+        <div class="ptm-heading">
+          <h1>Parent-Teacher Meetings</h1>
+          <p>Schedule and manage parent-teacher meetings</p>
+        </div>
+
+        <section class="ptm-grid">
+          <article class="calendar-card">
+            <div class="calendar-header">
+              <button type="button">‹</button>
+              <strong>January 2025</strong>
+              <button type="button">›</button>
+            </div>
+
+            <div class="calendar-days">
+              <span>Sun</span>
+              <span>Mon</span>
+              <span>Tue</span>
+              <span>Wed</span>
+              <span>Thu</span>
+              <span>Fri</span>
+              <span>Sat</span>
+            </div>
+
+            <div class="calendar-grid">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+
+              <span>5<i class="dot green"></i></span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10<i class="dot green"></i></span>
+              <span class="selected">11</span>
+
+              <span>12</span>
+              <span>13</span>
+              <span>14</span>
+              <span>15<i class="dot green"></i></span>
+              <span>16</span>
+              <span>17</span>
+              <span>18<i class="dot green"></i></span>
+
+              <span>19</span>
+              <span>20</span>
+              <span>21</span>
+              <span>22</span>
+              <span>23</span>
+              <span>24</span>
+              <span>25<i class="dot green"></i></span>
+
+              <span>26</span>
+              <span>27</span>
+              <span>28</span>
+              <span>29</span>
+              <span>30</span>
+              <span>31</span>
+              <span></span>
+            </div>
+
+            <div class="calendar-legend">
+              <span><i class="legend-box today"></i>Today</span>
+              <span><i class="legend-box selected-box"></i>Selected</span>
+              <span><i class="legend-box meeting"></i>Has Meeting</span>
+            </div>
+          </article>
+
+          <article class="create-card">
+            <h3>Create New PTM</h3>
+
+            <form id="ptmForm">
+              <label>
+                Teacher Name
+                <select id="teacherName">
+                  <option value="">Select teacher</option>
+                  <option>Ms. Sarah Johnson</option>
+                  <option>Mr. Ibrahim Ejaz</option>
+                  <option>Ms. Ayesha Naqvi</option>
+                </select>
+              </label>
+
+              <label>
+                Class / Toddler
+                <input type="text" id="classToddler" placeholder="Enter class or toddler name" />
+              </label>
+
+              <div class="form-row">
+                <label>
+                  Date
+                  <input type="date" id="ptmDate" />
+                </label>
+
+                <label>
+                  Time
+                  <input type="time" id="ptmTime" />
+                </label>
+              </div>
+
+              <label>
+                Meet Link
+                <input type="url" id="meetLink" placeholder="https://meet.google.com/..." />
+              </label>
+
+              <label>
+                Agenda
+                <textarea id="agenda" placeholder="Enter meeting agenda..."></textarea>
+              </label>
+
+              <button class="create-btn" type="submit">＋ Create PTM</button>
+
+              <p class="form-message" id="formMessage"></p>
+            </form>
+          </article>
+
+          <article class="upcoming-card">
+            <h3>Upcoming Meetings Today</h3>
+
+            <div class="meeting-list">
+              <div class="meeting-card">
+                <div class="meeting-top">
+                  <img src="https://i.pravatar.cc/80?img=47" alt="Parent" />
+                  <div>
+                    <strong>Shehroz Ali</strong>
+                    <span>Ameer Salaar</span>
+                  </div>
+                </div>
+
+                <p>◷ 09:00 AM (30 min)</p>
+                <p>♙ Ms. Zamrina Jehangir · Kindergarten - Tigers</p>
+                <a href="#">https://meet.google.com/abc-defg-hij</a>
+
+                <div class="meeting-actions">
+                  <button type="button">View Details</button>
+                  <button class="join-btn" type="button">Join Meeting</button>
+                </div>
+              </div>
+
+              <div class="meeting-card">
+                <div class="meeting-top">
+                  <img src="https://i.pravatar.cc/80?img=12" alt="Parent" />
+                  <div>
+                    <strong>Suneela Hameed</strong>
+                    <span>Suriya Zainab</span>
+                  </div>
+                </div>
+
+                <p>◷ 10:30 AM (30 min)</p>
+                <p>♙ Mr. Ibrahim Ejaz · Kindergarten - Tigers</p>
+                <a href="#">https://meet.google.com/xyz-abcd-efg</a>
+
+                <div class="meeting-actions">
+                  <button type="button">View Details</button>
+                  <button class="join-btn" type="button">Join Meeting</button>
+                </div>
+              </div>
+
+              <div class="meeting-card active-meeting">
+                <span class="progress-pill">In Progress</span>
+
+                <div class="meeting-top">
+                  <img src="https://i.pravatar.cc/80?img=32" alt="Parent" />
+                  <div>
+                    <strong>Mirha Nida</strong>
+                    <span>Nida Hameed</span>
+                  </div>
+                </div>
+
+                <p>◷ 11:00 AM (30 min)</p>
+                <p>♙ Ms. Javeria Asif · Kindergarten - Tigers</p>
+                <a href="#">https://meet.google.com/mno-pqr-stu</a>
+
+                <div class="meeting-actions">
+                  <button type="button">View Details</button>
+                  <button class="join-btn" type="button">Join Meeting</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="report-card">
+          <div class="report-left">
+            <h3>Active Meeting Report</h3>
+
+            <label>
+              Meeting Notes
+              <textarea placeholder="Enter meeting notes, discussion points, and action items..."></textarea>
+            </label>
+          </div>
+
+          <div class="report-right">
+            <h4>Current Meeting</h4>
+
+            <div class="current-meeting">
+              <img src="https://i.pravatar.cc/80?img=15" alt="Parent" />
+              <div>
+                <strong>Shahid Ali</strong>
+                <span>Abdul Rafay · Kindergarten</span>
+              </div>
+            </div>
+
+            <p>◷ 11:00 AM - 11:30 AM</p>
+            <p>♙ Ms. Ayesha Nadeem</p>
+
+            <button type="button" class="share-btn">✈ Share Report to Parent</button>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/principal-ptm.js"></script>
+</body>
+</html>
