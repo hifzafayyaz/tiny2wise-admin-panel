@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | Classes and Students</title>
+  <link rel="stylesheet" href="./css/principal-classes.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">▣</div>
+        <div>
+          <h1>Tiny2Wise</h1>
+          <p>Principal Dashboard</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="principal-dashboard.html" class="nav-link">
+          <span>⌂</span>Dashboard
+        </a>
+
+        <a href="principal-teacher.html" class="nav-link">
+          <span>♙</span>Teacher
+        </a>
+
+        <a href="principal-classes.html" class="nav-link active">
+          <span>▱</span>Classes and Students
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>☷</span>PTM Management
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>⚙</span>Setting
+        </a>
+      </nav>
+
+      <div class="principal-mini-card">
+        <div class="avatar" id="sidebarInitials">DA</div>
+
+        <div class="principal-text">
+          <strong id="sidebarName">Dr. Adnan</strong>
+          <span>Principal</span>
+        </div>
+
+        <button class="logout-icon" id="logoutBtn" type="button">⇥</button>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button">☰</button>
+
+        <div class="page-title">
+          <h2>School Overview</h2>
+          <p>Welcome back, <span id="principalName">Dr. Smith</span>!</p>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search students, teachers..." />
+          </label>
+
+          <button class="icon-button notification" type="button">♢</button>
+          <button class="icon-button" type="button">⚙</button>
+        </div>
+      </header>
+
+      <section class="classes-page">
+        <div class="breadcrumb">
+          Principal Dashboard <span>›</span> School Management <span>›</span>
+          <strong>Kindergarten - Tigers</strong>
+        </div>
+
+        <div class="class-heading">
+          <div>
+            <h1>Kindergarten - Tigers</h1>
+            <p>Class Roster | 24 Students | Ms. Sarah Johnson</p>
+          </div>
+
+          <button class="new-class-btn" type="button">＋ New Class</button>
+        </div>
+
+        <div class="tabs">
+          <button class="tab active" type="button">Student Roster</button>
+          <button class="tab" type="button">Attendance</button>
+          <button class="tab" type="button">Curriculum Progress</button>
+          <button class="tab" type="button">Parent Communication</button>
+        </div>
+
+        <section class="student-table-card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Student Name</th>
+                  <th>Accuracy Trend</th>
+                  <th>Sessions</th>
+                  <th>Badges Earned</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="student-cell">
+                      <img src="https://i.pravatar.cc/80?img=12" alt="Student" />
+                      <div>
+                        <strong>Ameer Salaar</strong>
+                        <span>STU-001</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="trend-cell">
+                      <span class="trend-line"></span>
+                      <strong>85<br />%</strong>
+                    </div>
+                  </td>
+
+                  <td>42</td>
+
+                  <td>
+                    <div class="badges">
+                      <span class="star">★</span>
+                      <span class="gem">◆</span>
+                      <span class="shield">♥</span>
+                      <span class="ribbon">♟</span>
+                    </div>
+                  </td>
+
+                  <td><button class="details-btn">View Details</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="student-cell">
+                      <img src="https://i.pravatar.cc/80?img=13" alt="Student" />
+                      <div>
+                        <strong>M. Saaid</strong>
+                        <span>STU-002</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="trend-cell">
+                      <span class="trend-line"></span>
+                      <strong>88<br />%</strong>
+                    </div>
+                  </td>
+
+                  <td>38</td>
+
+                  <td>
+                    <div class="badges">
+                      <span class="star">★</span>
+                      <span class="gem">◆</span>
+                      <span class="shield">♥</span>
+                    </div>
+                  </td>
+
+                  <td><button class="details-btn">View Details</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="student-cell">
+                      <img src="https://i.pravatar.cc/80?img=14" alt="Student" />
+                      <div>
+                        <strong>Suriya Zainab</strong>
+                        <span>STU-003</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="trend-cell">
+                      <span class="trend-line"></span>
+                      <strong>84<br />%</strong>
+                    </div>
+                  </td>
+
+                  <td>45</td>
+
+                  <td>
+                    <div class="badges">
+                      <span class="star">★</span>
+                      <span class="gem">◆</span>
+                      <span class="ribbon">♟</span>
+                    </div>
+                  </td>
+
+                  <td><button class="details-btn">View Details</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="student-cell">
+                      <img src="https://i.pravatar.cc/80?img=15" alt="Student" />
+                      <div>
+                        <strong>Urooj Saif</strong>
+                        <span>STU-004</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="trend-cell">
+                      <span class="trend-line"></span>
+                      <strong>86<br />%</strong>
+                    </div>
+                  </td>
+
+                  <td>40</td>
+
+                  <td>
+                    <div class="badges">
+                      <span class="star">★</span>
+                      <span class="shield">♥</span>
+                      <span class="ribbon">♟</span>
+                    </div>
+                  </td>
+
+                  <td><button class="details-btn">View Details</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="student-cell">
+                      <img src="https://i.pravatar.cc/80?img=16" alt="Student" />
+                      <div>
+                        <strong>Saim Ali</strong>
+                        <span>STU-005</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="trend-cell">
+                      <span class="trend-line"></span>
+                      <strong>90<br />%</strong>
+                    </div>
+                  </td>
+
+                  <td>48</td>
+
+                  <td>
+                    <div class="badges">
+                      <span class="star">★</span>
+                      <span class="gem">◆</span>
+                      <span class="shield">♥</span>
+                      <span class="ribbon">♟</span>
+                    </div>
+                  </td>
+
+                  <td><button class="details-btn">View Details</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="student-cell">
+                      <img src="https://i.pravatar.cc/80?img=17" alt="Student" />
+                      <div>
+                        <strong>Abdul Rafay</strong>
+                        <span>STU-006</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="trend-cell">
+                      <span class="trend-line"></span>
+                      <strong>81<br />%</strong>
+                    </div>
+                  </td>
+
+                  <td>36</td>
+
+                  <td>
+                    <div class="badges">
+                      <span class="star">★</span>
+                      <span class="gem">◆</span>
+                    </div>
+                  </td>
+
+                  <td><button class="details-btn">View Details</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="student-cell">
+                      <img src="https://i.pravatar.cc/80?img=18" alt="Student" />
+                      <div>
+                        <strong>Mabad Shahid</strong>
+                        <span>STU-007</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="trend-cell">
+                      <span class="trend-line"></span>
+                      <strong>89<br />%</strong>
+                    </div>
+                  </td>
+
+                  <td>44</td>
+
+                  <td>
+                    <div class="badges">
+                      <span class="star">★</span>
+                      <span class="gem">◆</span>
+                      <span class="shield">♥</span>
+                      <span class="ribbon">♟</span>
+                    </div>
+                  </td>
+
+                  <td><button class="details-btn">View Details</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="student-cell">
+                      <img src="https://i.pravatar.cc/80?img=19" alt="Student" />
+                      <div>
+                        <strong>Mirha Nida</strong>
+                        <span>STU-008</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="trend-cell">
+                      <span class="trend-line"></span>
+                      <strong>82<br />%</strong>
+                    </div>
+                  </td>
+
+                  <td>39</td>
+
+                  <td>
+                    <div class="badges">
+                      <span class="star">★</span>
+                      <span class="shield">♥</span>
+                    </div>
+                  </td>
+
+                  <td><button class="details-btn">View Details</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/principal-classes.js"></script>
+</body>
+</html>
