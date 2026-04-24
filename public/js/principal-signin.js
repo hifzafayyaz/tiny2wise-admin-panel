@@ -17,14 +17,16 @@ const errors = {
   password: document.getElementById("passwordError")
 };
 
-togglePassword.addEventListener("click", () => {
-  passwordInput.type = passwordInput.type === "password" ? "text" : "password";
-  togglePassword.textContent = passwordInput.type === "password" ? "👁" : "🙈";
-});
+if (togglePassword) {
+  togglePassword.addEventListener("click", () => {
+    passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    togglePassword.textContent = passwordInput.type === "password" ? "👁" : "🙈";
+  });
+}
 
 function clearErrors() {
   Object.values(errors).forEach((el) => {
-    el.textContent = "";
+    if (el) el.textContent = "";
   });
 
   messageBox.className = "form-message";
@@ -33,7 +35,9 @@ function clearErrors() {
 }
 
 function setError(fieldName, message) {
-  errors[fieldName].textContent = message;
+  if (errors[fieldName]) {
+    errors[fieldName].textContent = message;
+  }
 }
 
 function isValidEmail(email) {
@@ -79,12 +83,12 @@ form.addEventListener("submit", async (e) => {
     signinBtn.textContent = "Signing In...";
 
     const response = await fetch(`${API_BASE_URL}/api/principal-auth/signin`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(payload)
-});
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
 
     const result = await response.json();
 
@@ -95,26 +99,43 @@ form.addEventListener("submit", async (e) => {
       return;
     }
 
-    if (fields.rememberMe.checked) {
-      localStorage.setItem("principalAuth", JSON.stringify(result.data));
-    } else {
-      sessionStorage.setItem("principalAuth", JSON.stringify(result.data));
+    localStorage.removeItem("principalAuth");
+    sessionStorage.removeItem("principalAuth");
+    localStorage.removeItem("systemAdminAuth");
+    sessionStorage.removeItem("systemAdminAuth");
+
+    if (result.data.role === "system-admin") {
+      const storage = fields.rememberMe && fields.rememberMe.checked ? localStorage : sessionStorage;
+      storage.setItem("systemAdminAuth", JSON.stringify(result.data));
+
+      messageBox.className = "form-message success";
+      messageBox.style.display = "block";
+      messageBox.textContent = result.message || "System Admin sign in successful.";
+
+      setTimeout(() => {
+        window.location.href = "system-admin-dashboard.html";
+      }, 700);
+
+      return;
     }
+
+    const storage = fields.rememberMe && fields.rememberMe.checked ? localStorage : sessionStorage;
+    storage.setItem("principalAuth", JSON.stringify(result.data));
 
     messageBox.className = "form-message success";
     messageBox.style.display = "block";
-    messageBox.textContent = result.message || "Sign in successful.";
+    messageBox.textContent = result.message || "Principal sign in successful.";
 
     setTimeout(() => {
-window.location.href = "principal-dashboard.html";    }, 800);
+      window.location.href = "principal-dashboard.html";
+    }, 700);
   } catch (error) {
-  console.error("Sign in error:", error);
+    console.error("Sign in error:", error);
 
-  messageBox.className = "form-message error";
-  messageBox.style.display = "block";
-  messageBox.textContent = `Unable to connect to server: ${error.message}`;
-}
- finally {
+    messageBox.className = "form-message error";
+    messageBox.style.display = "block";
+    messageBox.textContent = `Unable to connect to server: ${error.message}`;
+  } finally {
     signinBtn.disabled = false;
     signinBtn.textContent = "Sign In";
   }

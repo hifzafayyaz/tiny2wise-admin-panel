@@ -22,27 +22,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, "public")));
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "principal-signup.html"));
-});
-
-app.get("/signin", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "principal-signin.html"));
-});
-
-app.get("/dashboard", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "principal-dashboard.html"));
-});
-
-app.get("/teacher", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "principal-teacher.html"));
-});
-
-app.use("/api/principal-auth", require("./routes/principalAuthRoutes"));
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on port ${PORT}`);
+app.get("/system-admin", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "system-admin-dashboard.html"));
 });

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | System Admin Dashboard</title>
+  <link rel="stylesheet" href="./css/system-admin-dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">▣</div>
+
+        <div>
+          <h1>Tiny2Wise</h1>
+          <p>Voice Across Generations</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="system-admin-dashboard.html" class="nav-link active">
+          <span>⌘</span>Dashboard
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>♙</span>User Management
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>▱</span>Toddlers Management
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>♙</span>Sessions and Badges
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>▰</span>Recording Library
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>☷</span>News & Content
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>▣</span>Logs
+        </a>
+      </nav>
+
+      <div class="admin-mini-card">
+        <div class="avatar" id="sidebarInitials">HF</div>
+
+        <div class="admin-text">
+          <strong id="sidebarName">Hifza Fayyaz</strong>
+          <span>Super Admin</span>
+        </div>
+
+        <button class="logout-icon" id="logoutBtn" type="button">⇥</button>
+      </div>
+
+      <div class="health-pill">
+        <span></span>
+        System Healthy
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button">☰</button>
+
+        <div class="page-title">
+          <h2>System Admin</h2>
+          <p>Dashboard</p>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search system resources..." />
+          </label>
+
+          <button class="icon-button" type="button">♧</button>
+          <button class="icon-button" type="button">⚙</button>
+          <button class="create-user-btn" type="button">＋ Create User</button>
+        </div>
+      </header>
+
+      <section class="admin-page">
+        <div class="section-heading">
+          <h1>Quick Actions</h1>
+          <p>Common operational tasks and system controls</p>
+        </div>
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="card-top">
+              <span>Active Users</span>
+              <strong class="positive">+6.2%</strong>
+            </div>
+
+            <h3>1,240</h3>
+
+            <div class="mini-line blue-line">
+              <span></span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="card-top">
+              <span>Teachers</span>
+              <strong class="positive">+6.5%</strong>
+            </div>
+
+            <h3>850</h3>
+          </article>
+
+          <article class="stat-card">
+            <div class="card-top">
+              <span>AVG Latency</span>
+              <strong class="danger">High</strong>
+            </div>
+
+            <h3>120ms</h3>
+
+            <div class="mini-line red-line">
+              <span></span>
+            </div>
+          </article>
+
+          <article class="stat-card">
+            <div class="card-top">
+              <span>Storage Usage</span>
+              <strong class="warning">73%</strong>
+            </div>
+
+            <h3>4.2 TB</h3>
+            <p>Of total approx 6.0 TB quota</p>
+          </article>
+
+          <article class="stat-card small">
+            <div class="card-top">
+              <span>TTS Queue Depth</span>
+              <strong class="stable">Stable</strong>
+            </div>
+
+            <h3>42</h3>
+
+            <div class="queue-bar">
+              <span></span>
+            </div>
+          </article>
+
+          <article class="stat-card small">
+            <div class="card-top">
+              <span>Sessions Today</span>
+              <strong class="positive">+18%</strong>
+            </div>
+
+            <h3>312</h3>
+            <p>Since start at 08:00 AM</p>
+          </article>
+        </section>
+
+        <section class="charts-grid">
+          <article class="chart-card">
+            <div class="chart-header">
+              <div>
+                <h3>User Activity (24h)</h3>
+                <p>Active Users vs Enrolled Teachers</p>
+              </div>
+
+              <span>Last 24 Hours</span>
+            </div>
+
+            <div class="big-number">
+              12,400 <span>Total Events</span>
+            </div>
+
+            <div class="line-chart">
+              <div class="y-axis">
+                <span>12000</span>
+                <span>9000</span>
+                <span>6000</span>
+                <span>3000</span>
+                <span>0</span>
+              </div>
+
+              <div class="chart-area">
+                <svg viewBox="0 0 500 210" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25" />
+                      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.02" />
+                    </linearGradient>
+                  </defs>
+
+                  <path
+                    d="M0,165 C55,160 85,155 120,135 C160,112 190,95 225,80 C270,60 315,25 365,35 C415,45 445,70 500,105 L500,210 L0,210 Z"
+                    fill="url(#areaGradient)"
+                  />
+
+                  <path
+                    d="M0,165 C55,160 85,155 120,135 C160,112 190,95 225,80 C270,60 315,25 365,35 C415,45 445,70 500,105"
+                    fill="none"
+                    stroke="#3b82f6"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+                <div class="x-axis">
+                  <span>00:00</span>
+                  <span>04:00</span>
+                  <span>08:00</span>
+                  <span>12:00</span>
+                  <span>16:00</span>
+                  <span>20:00</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="chart-card">
+            <div class="chart-header">
+              <div>
+                <h3>System Performance</h3>
+                <p>Real-time Latency & Queue Depth</p>
+              </div>
+
+              <div class="legend">
+                <span><i class="green-dot"></i>Latency</span>
+                <span><i class="blue-dot"></i>Queue</span>
+              </div>
+            </div>
+
+            <div class="big-number">
+              145ms <span>Avg. Latency</span>
+            </div>
+
+            <div class="bar-chart">
+              <div class="bars">
+                <div class="bar-group">
+                  <span class="bar green h120"></span>
+                  <span class="bar blue h85"></span>
+                  <small>1h ago</small>
+                </div>
+
+                <div class="bar-group">
+                  <span class="bar green h138"></span>
+                  <span class="bar blue h96"></span>
+                  <small>45m ago</small>
+                </div>
+
+                <div class="bar-group">
+                  <span class="bar green h160"></span>
+                  <span class="bar blue h120"></span>
+                  <small>30m ago</small>
+                </div>
+
+                <div class="bar-group">
+                  <span class="bar green h145"></span>
+                  <span class="bar blue h108"></span>
+                  <small>15m ago</small>
+                </div>
+
+                <div class="bar-group">
+                  <span class="bar green h148"></span>
+                  <span class="bar blue h100"></span>
+                  <small>Now</small>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <footer class="footer-text">
+          Tiny2Wise Dashboard v1.4.0-alpha | Built by Adan & Hifza
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/system-admin-dashboard.js"></script>
+</body>
+</html>

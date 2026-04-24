@@ -1,6 +1,9 @@
 const bcrypt = require("bcryptjs");
 const Principal = require("../models/Principal");
 
+const SYSTEM_ADMIN_EMAIL = "waheed@gmail.com";
+const SYSTEM_ADMIN_PASSWORD = "Waheed123";
+
 const isValidEmail = (email) => {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 };
@@ -60,7 +63,7 @@ const signupPrincipal = async (req, res) => {
         schoolName: principal.schoolName,
         officialEmail: principal.officialEmail,
         contactNumber: principal.contactNumber,
-        role: principal.role
+        role: principal.role || "principal"
       }
     });
   } catch (error) {
@@ -90,8 +93,24 @@ const signinPrincipal = async (req, res) => {
       });
     }
 
+    const email = officialEmail.toLowerCase().trim();
+
+    if (email === SYSTEM_ADMIN_EMAIL && password === SYSTEM_ADMIN_PASSWORD) {
+      return res.status(200).json({
+        success: true,
+        message: "System Admin sign in successful.",
+        redirectTo: "system-admin-dashboard.html",
+        data: {
+          id: "system-admin-001",
+          fullName: "Waheed",
+          officialEmail: SYSTEM_ADMIN_EMAIL,
+          role: "system-admin"
+        }
+      });
+    }
+
     const principal = await Principal.findOne({
-      officialEmail: officialEmail.toLowerCase()
+      officialEmail: email
     });
 
     if (!principal) {
@@ -112,14 +131,15 @@ const signinPrincipal = async (req, res) => {
 
     return res.status(200).json({
       success: true,
-      message: "Sign in successful.",
+      message: "Principal sign in successful.",
+      redirectTo: "principal-dashboard.html",
       data: {
         id: principal._id,
         fullName: principal.fullName,
         schoolName: principal.schoolName,
         officialEmail: principal.officialEmail,
         contactNumber: principal.contactNumber,
-        role: principal.role
+        role: "principal"
       }
     });
   } catch (error) {
