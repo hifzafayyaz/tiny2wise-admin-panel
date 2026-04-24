@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | Student Progress</title>
+  <link rel="stylesheet" href="./css/principal-student-progress.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">▣</div>
+
+        <div>
+          <h1>Tiny2Wise</h1>
+          <p>Principal Dashboard</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="principal-dashboard.html" class="nav-link">
+          <span>⌂</span>Dashboard
+        </a>
+
+        <a href="principal-teacher.html" class="nav-link">
+          <span>♙</span>Teacher
+        </a>
+
+        <a href="principal-classes.html" class="nav-link active">
+          <span>▱</span>Classes and Students
+        </a>
+
+        <a href="principal-ptm.html" class="nav-link">
+          <span>☷</span>PTM Management
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>⚙</span>Setting
+        </a>
+      </nav>
+
+      <div class="principal-mini-card">
+        <div class="avatar" id="sidebarInitials">DA</div>
+
+        <div class="principal-text">
+          <strong id="sidebarName">Dr. Adnan</strong>
+          <span>Principal</span>
+        </div>
+
+        <button class="logout-icon" id="logoutBtn" type="button">⇥</button>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button">☰</button>
+
+        <div class="page-title">
+          <h2>School Overview</h2>
+          <p>Welcome back, <span id="principalName">Dr. Smith</span>!</p>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search students, teachers..." />
+          </label>
+
+          <button class="icon-button notification" type="button">♢</button>
+          <button class="icon-button" type="button">⚙</button>
+        </div>
+      </header>
+
+      <section class="progress-page">
+        <div class="breadcrumb">
+          Principal Dashboard <span>›</span> School Management <span>›</span>
+          <strong>Kindergarten - Tigers</strong>
+        </div>
+
+        <div class="class-heading">
+          <div>
+            <h1>Kindergarten - Tigers</h1>
+            <p>Class Roster | 24 Students | Ms. Sarah Johnson</p>
+          </div>
+
+          <button class="new-class-btn" type="button">＋ New Class</button>
+        </div>
+
+        <div class="tabs">
+          <button
+            class="tab"
+            type="button"
+            onclick="window.location.href='principal-classes.html'"
+          >
+            Student Roster
+          </button>
+
+          <button
+            class="tab"
+            type="button"
+            onclick="window.location.href='principal-student-attendance.html'"
+          >
+            Attendance
+          </button>
+
+          <button class="tab active" type="button">Curriculum Progress</button>
+
+          <button class="tab" type="button">Parent Communication</button>
+        </div>
+
+        <section class="progress-card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Module Title</th>
+                  <th>Description</th>
+                  <th>Progress</th>
+                  <th>Total<br />Lessons</th>
+                  <th>Completed<br />Lessons</th>
+                  <th>Students</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    <strong class="module-title">Phoneme Recognition - Basic Sounds</strong>
+                  </td>
+
+                  <td>
+                    Learn to identify and pronounce /ا/, /ب/, /ت/ sounds
+                  </td>
+
+                  <td>
+                    <div class="progress-cell">
+                      <div class="progress-track">
+                        <span class="progress-fill" style="width: 85%;"></span>
+                      </div>
+                      <strong>85%</strong>
+                    </div>
+                  </td>
+
+                  <td>12</td>
+                  <td>10</td>
+
+                  <td>
+                    <div class="student-stack">
+                      <img src="https://i.pravatar.cc/40?img=12" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=13" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=14" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=15" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=16" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=17" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=18" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=19" alt="student" />
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong class="module-title">Consonant Blends</strong>
+                  </td>
+
+                  <td>
+                    Practice blending /خ/ and /غ/ with other consonants
+                  </td>
+
+                  <td>
+                    <div class="progress-cell">
+                      <div class="progress-track">
+                        <span class="progress-fill" style="width: 72%;"></span>
+                      </div>
+                      <strong>72%</strong>
+                    </div>
+                  </td>
+
+                  <td>10</td>
+                  <td>7</td>
+
+                  <td>
+                    <div class="student-stack">
+                      <img src="https://i.pravatar.cc/40?img=20" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=21" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=22" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=23" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=24" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=25" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=26" alt="student" />
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong class="module-title">Vowel Sounds Recognition</strong>
+                  </td>
+
+                  <td>
+                    Distinguish between short and long vowel sounds
+                  </td>
+
+                  <td>
+                    <div class="progress-cell">
+                      <div class="progress-track">
+                        <span class="progress-fill" style="width: 65%;"></span>
+                      </div>
+                      <strong>65%</strong>
+                    </div>
+                  </td>
+
+                  <td>15</td>
+                  <td>10</td>
+
+                  <td>
+                    <div class="student-stack">
+                      <img src="https://i.pravatar.cc/40?img=27" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=28" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=29" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=30" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=31" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=32" alt="student" />
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <strong class="module-title">Word Building Activities</strong>
+                  </td>
+
+                  <td>
+                    Combine phonemes to create simple words
+                  </td>
+
+                  <td>
+                    <div class="progress-cell">
+                      <div class="progress-track">
+                        <span class="progress-fill" style="width: 45%;"></span>
+                      </div>
+                      <strong>45%</strong>
+                    </div>
+                  </td>
+
+                  <td>8</td>
+                  <td>4</td>
+
+                  <td>
+                    <div class="student-stack">
+                      <img src="https://i.pravatar.cc/40?img=33" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=34" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=35" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=36" alt="student" />
+                      <img src="https://i.pravatar.cc/40?img=37" alt="student" />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/principal-student-progress.js"></script>
+</body>
+</html>
