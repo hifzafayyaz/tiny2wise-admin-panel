@@ -31,6 +31,7 @@ function clearErrors() {
   Object.values(errors).forEach((el) => {
     el.textContent = "";
   });
+
   messageBox.className = "form-message";
   messageBox.style.display = "none";
   messageBox.textContent = "";
@@ -46,6 +47,7 @@ function isValidEmail(email) {
 
 function validateForm() {
   clearErrors();
+
   let isValid = true;
 
   if (!fields.fullName.value.trim()) {
@@ -123,6 +125,7 @@ form.addEventListener("submit", async (e) => {
     form.reset();
   } catch (error) {
     console.error("Frontend fetch error:", error);
+
     messageBox.className = "form-message error";
     messageBox.style.display = "block";
     messageBox.textContent = "Unable to connect to server.";

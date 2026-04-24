@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "http://127.0.0.1:5000";
 
 const form = document.getElementById("principalSigninForm");
 const signinBtn = document.getElementById("signinBtn");
@@ -26,6 +26,7 @@ function clearErrors() {
   Object.values(errors).forEach((el) => {
     el.textContent = "";
   });
+
   messageBox.className = "form-message";
   messageBox.style.display = "none";
   messageBox.textContent = "";
@@ -41,6 +42,7 @@ function isValidEmail(email) {
 
 function validateForm() {
   clearErrors();
+
   let isValid = true;
 
   const email = fields.officialEmail.value.trim();
@@ -77,12 +79,12 @@ form.addEventListener("submit", async (e) => {
     signinBtn.textContent = "Signing In...";
 
     const response = await fetch(`${API_BASE_URL}/api/principal-auth/signin`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(payload)
-    });
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(payload)
+});
 
     const result = await response.json();
 
@@ -104,14 +106,15 @@ form.addEventListener("submit", async (e) => {
     messageBox.textContent = result.message || "Sign in successful.";
 
     setTimeout(() => {
-      window.location.href = `${API_BASE_URL}/dashboard`;
-    }, 800);
+window.location.href = "principal-dashboard.html";    }, 800);
   } catch (error) {
-    console.error("Sign in error:", error);
-    messageBox.className = "form-message error";
-    messageBox.style.display = "block";
-    messageBox.textContent = "Unable to connect to server.";
-  } finally {
+  console.error("Sign in error:", error);
+
+  messageBox.className = "form-message error";
+  messageBox.style.display = "block";
+  messageBox.textContent = `Unable to connect to server: ${error.message}`;
+}
+ finally {
     signinBtn.disabled = false;
     signinBtn.textContent = "Sign In";
   }

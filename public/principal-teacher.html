@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | Teacher Overview</title>
+  <link rel="stylesheet" href="./css/principal-teacher.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">▣</div>
+        <div>
+          <h1>Tiny2Wise</h1>
+          <p>Principal Dashboard</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+<a href="principal-dashboard.html" class="nav-link"><span>⌂</span>Dashboard</a>          <span>⌂</span> Dashboard
+        </a>
+
+        <a href="principal-teacher.html" class="nav-link active">
+          <span>♙</span> Teacher
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>▱</span> Classes and Students
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>☷</span> PTM Management
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>⚙</span> Setting
+        </a>
+      </nav>
+
+      <div class="principal-mini-card">
+        <div class="avatar" id="sidebarInitials">DA</div>
+
+        <div class="principal-text">
+          <strong id="sidebarName">Dr. Adnan</strong>
+          <span>Principal</span>
+        </div>
+
+        <button class="logout-icon" id="logoutBtn" type="button">⇥</button>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button">☰</button>
+
+        <div class="page-title">
+          <h2>School Overview</h2>
+          <p>Welcome back, <span id="principalName">Dr. Smith</span>!</p>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search students, teachers..." />
+          </label>
+
+          <button class="icon-button notification" type="button">♢</button>
+          <button class="icon-button" type="button">⚙</button>
+        </div>
+      </header>
+
+      <section class="teacher-page">
+        <div class="breadcrumb">
+          Home <span>/</span> <strong>Teacher</strong>
+        </div>
+
+        <section class="top-stats">
+          <article class="small-stat-card">
+            <div class="stat-icon blue">♙</div>
+            <p>Total Teachers</p>
+            <h3>28</h3>
+            <span>24 active, 4 on leave</span>
+          </article>
+
+          <article class="small-stat-card">
+            <div class="stat-icon green">▱</div>
+            <p>Active Classes</p>
+            <h3>15</h3>
+            <span>Across all grades</span>
+          </article>
+        </section>
+
+        <section class="table-card">
+          <div class="table-header">
+            <div>
+              <h2>Teaching Staff Overview</h2>
+              <p>Manage your teaching staff and their assignments</p>
+            </div>
+
+            <div class="table-actions">
+              <label class="teacher-search">
+                <span>⌕</span>
+                <input type="search" id="teacherSearch" placeholder="Search teachers..." />
+              </label>
+
+              <button class="add-teacher-btn" type="button">＋ Add New Teacher</button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Teacher Name</th>
+                  <th>Contact Info</th>
+                  <th>Assigned Classes</th>
+                  <th>Total Students</th>
+                  <th>Avg. Accuracy</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody id="teacherTableBody">
+                <tr>
+                  <td>
+                    <div class="teacher-cell">
+                      <img src="https://i.pravatar.cc/80?img=31" alt="Teacher" />
+                      <div>
+                        <strong>Zamrina Jehangir</strong>
+                        <span>Teacher ID:</span>
+                        <small>T-0001</small>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="contact-info">
+                      <span>✉ zamrina.jehangir@school.edu.pk</span>
+                      <span>☎ +1 (555) 123-4567</span>
+                    </div>
+                  </td>
+
+                  <td>Class A, Class B</td>
+                  <td>48</td>
+                  <td><span class="accuracy good">92%</span></td>
+                  <td><span class="status active">Active</span></td>
+                  <td><button class="details-btn">View Details</button></td>
+                  <td class="dots">⋮</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="teacher-cell">
+                      <img src="https://i.pravatar.cc/80?img=32" alt="Teacher" />
+                      <div>
+                        <strong>Javeria Asif</strong>
+                        <span>Teacher ID:</span>
+                        <small>T-0002</small>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="contact-info">
+                      <span>✉ javeria.asif@school.edu.pk</span>
+                      <span>☎ +1 (555) 234-5678</span>
+                    </div>
+                  </td>
+
+                  <td>Class C</td>
+                  <td>24</td>
+                  <td><span class="accuracy medium">88%</span></td>
+                  <td><span class="status active">Active</span></td>
+                  <td><button class="details-btn">View Details</button></td>
+                  <td class="dots">⋮</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="teacher-cell">
+                      <img src="https://i.pravatar.cc/80?img=33" alt="Teacher" />
+                      <div>
+                        <strong>Umer Rehman</strong>
+                        <span>Teacher ID:</span>
+                        <small>T-0003</small>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="contact-info">
+                      <span>✉ umer.rehman@school.edu.pk</span>
+                      <span>☎ +1 (555) 345-6789</span>
+                    </div>
+                  </td>
+
+                  <td>Class D, Class E</td>
+                  <td>52</td>
+                  <td><span class="accuracy good">95%</span></td>
+                  <td><span class="status active">Active</span></td>
+                  <td><button class="details-btn">View Details</button></td>
+                  <td class="dots">⋮</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="teacher-cell">
+                      <img src="https://i.pravatar.cc/80?img=34" alt="Teacher" />
+                      <div>
+                        <strong>Hamza Ali</strong>
+                        <span>Teacher ID:</span>
+                        <small>T-0004</small>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="contact-info">
+                      <span>✉ hamza.ali@school.edu.pk</span>
+                      <span>☎ +1 (555) 456-7890</span>
+                    </div>
+                  </td>
+
+                  <td>Class F</td>
+                  <td>28</td>
+                  <td><span class="accuracy good">90%</span></td>
+                  <td><span class="status active">Active</span></td>
+                  <td><button class="details-btn">View Details</button></td>
+                  <td class="dots">⋮</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="teacher-cell">
+                      <img src="https://i.pravatar.cc/80?img=35" alt="Teacher" />
+                      <div>
+                        <strong>Ibrahim Ejaz</strong>
+                        <span>Teacher ID:</span>
+                        <small>T-0005</small>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="contact-info">
+                      <span>✉ ibrahim.ejaz@school.edu.pk</span>
+                      <span>☎ +1 (555) 567-8901</span>
+                    </div>
+                  </td>
+
+                  <td>Class G</td>
+                  <td>30</td>
+                  <td><span class="accuracy medium">87%</span></td>
+                  <td><span class="status leave">On Leave</span></td>
+                  <td><button class="details-btn">View Details</button></td>
+                  <td class="dots">⋮</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="teacher-cell">
+                      <img src="https://i.pravatar.cc/80?img=36" alt="Teacher" />
+                      <div>
+                        <strong>Asif Noman</strong>
+                        <span>Teacher ID:</span>
+                        <small>T-0006</small>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="contact-info">
+                      <span>✉ asif.noman@school.edu.pk</span>
+                      <span>☎ +1 (555) 678-9012</span>
+                    </div>
+                  </td>
+
+                  <td>Class H, Class I</td>
+                  <td>55</td>
+                  <td><span class="accuracy good">93%</span></td>
+                  <td><span class="status active">Active</span></td>
+                  <td><button class="details-btn">View Details</button></td>
+                  <td class="dots">⋮</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="teacher-cell">
+                      <img src="https://i.pravatar.cc/80?img=37" alt="Teacher" />
+                      <div>
+                        <strong>Saadia Aziz</strong>
+                        <span>Teacher ID:</span>
+                        <small>T-0007</small>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="contact-info">
+                      <span>✉ saadia.aziz@school.edu.pk</span>
+                      <span>☎ +1 (555) 789-0123</span>
+                    </div>
+                  </td>
+
+                  <td>Class J</td>
+                  <td>26</td>
+                  <td><span class="accuracy good">91%</span></td>
+                  <td><span class="status active">Active</span></td>
+                  <td><button class="details-btn">View Details</button></td>
+                  <td class="dots">⋮</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="teacher-cell">
+                      <img src="https://i.pravatar.cc/80?img=38" alt="Teacher" />
+                      <div>
+                        <strong>Ayesha Naqvi</strong>
+                        <span>Teacher ID:</span>
+                        <small>T-0008</small>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>
+                    <div class="contact-info">
+                      <span>✉ ayesha.naqvi@school.edu.pk</span>
+                      <span>☎ +1 (555) 890-1234</span>
+                    </div>
+                  </td>
+
+                  <td>Class K</td>
+                  <td>22</td>
+                  <td><span class="accuracy medium">89%</span></td>
+                  <td><span class="status active">Active</span></td>
+                  <td><button class="details-btn">View Details</button></td>
+                  <td class="dots">⋮</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-footer">
+            <p>Showing 1 to 8 of 28 teachers</p>
+
+            <div class="pagination">
+              <button>Previous</button>
+              <button class="active">1</button>
+              <button>2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>Next</button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/principal-teacher.js"></script>
+</body>
+</html>
