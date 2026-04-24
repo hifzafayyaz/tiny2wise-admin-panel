@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | Students Parent Communication</title>
+  <link rel="stylesheet" href="./css/principal-students-parent.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">▣</div>
+
+        <div>
+          <h1>Tiny2Wise</h1>
+          <p>Principal Dashboard</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="principal-dashboard.html" class="nav-link">
+          <span>⌂</span>Dashboard
+        </a>
+
+        <a href="principal-teacher.html" class="nav-link">
+          <span>♙</span>Teacher
+        </a>
+
+        <a href="principal-classes.html" class="nav-link active">
+          <span>▱</span>Classes and Students
+        </a>
+
+        <a href="principal-ptm.html" class="nav-link">
+  <span>☷</span>PTM Management
+</a>
+
+        <a href="#" class="nav-link">
+          <span>⚙</span>Setting
+        </a>
+      </nav>
+
+      <div class="principal-mini-card">
+        <div class="avatar" id="sidebarInitials">DA</div>
+
+        <div class="principal-text">
+          <strong id="sidebarName">Dr. Adnan</strong>
+          <span>Principal</span>
+        </div>
+
+        <button class="logout-icon" id="logoutBtn" type="button">⇥</button>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button">☰</button>
+
+        <div class="page-title">
+          <h2>School Overview</h2>
+          <p>Welcome back, <span id="principalName">Dr. Smith</span>!</p>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search students, teachers..." />
+          </label>
+
+          <button class="icon-button notification" type="button">♢</button>
+          <button class="icon-button" type="button">⚙</button>
+        </div>
+      </header>
+
+      <section class="parent-page">
+        <div class="breadcrumb">
+          Principal Dashboard <span>›</span> School Management <span>›</span>
+          <strong>Kindergarten - Tigers</strong>
+        </div>
+
+        <div class="class-heading">
+          <div>
+            <h1>Kindergarten - Tigers</h1>
+            <p>Class Roster | 24 Students | Ms. Sarah Johnson</p>
+          </div>
+
+          <button class="new-class-btn" type="button">＋ New Class</button>
+        </div>
+
+        <div class="tabs">
+          <button
+            class="tab"
+            type="button"
+            onclick="window.location.href='principal-classes.html'"
+          >
+            Student Roster
+          </button>
+
+          <button
+            class="tab"
+            type="button"
+            onclick="window.location.href='principal-student-attendance.html'"
+          >
+            Attendance
+          </button>
+
+          <button
+            class="tab"
+            type="button"
+            onclick="window.location.href='principal-student-progress.html'"
+          >
+            Curriculum Progress
+          </button>
+
+          <button class="tab active" type="button">Parent Communication</button>
+        </div>
+
+        <section class="communication-card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Parent Name</th>
+                  <th>Student Name</th>
+                  <th>Subject</th>
+                  <th>Preview</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="parent-cell">
+                      <img src="https://i.pravatar.cc/80?img=47" alt="Parent" />
+                      <div>
+                        <strong>Shehroz<br />Ali</strong>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>Ameer Salaar</td>
+                  <td>Progress<br />Update Request</td>
+                  <td>
+                    Hi Ms. Johnson, could you please provide an update on Emma's
+                    recent progress...
+                  </td>
+                  <td>Jan 10,<br />2025</td>
+                  <td>2:30 PM</td>
+                  <td><span class="status unread">Unread</span></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="parent-cell">
+                      <img src="https://i.pravatar.cc/80?img=12" alt="Parent" />
+                      <div>
+                        <strong>Umair Hameed</strong>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>M, Saaid</td>
+                  <td>Absence Notification</td>
+                  <td>
+                    Liam will be absent tomorrow due to a doctor's appointment...
+                  </td>
+                  <td>Jan 9,<br />2025</td>
+                  <td>4:15 PM</td>
+                  <td><span class="status read">Read</span></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="parent-cell">
+                      <img src="https://i.pravatar.cc/80?img=32" alt="Parent" />
+                      <div>
+                        <strong>Suneela<br />Hameed</strong>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td>Suriya<br />Zainab</td>
+                  <td>Thank You!</td>
+                  <td>
+                    Thank you for the extra support with Olivia's phonics practice...
+                  </td>
+                  <td>Jan 8,<br />2025</td>
+                  <td>10:00 AM</td>
+                  <td><span class="status read">Read</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/principal-students-parent.js"></script>
+</body>
+</html>
