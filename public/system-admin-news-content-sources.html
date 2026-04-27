@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | News & Content Sources</title>
+  <link rel="stylesheet" href="./css/system-admin-news-content-sources.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">▣</div>
+
+        <div>
+          <h1>Tiny2Wise</h1>
+          <p>Voice Across Generations</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="system-admin-dashboard.html" class="nav-link">
+          <span>⌘</span>Dashboard
+        </a>
+
+        <a href="system-admin-users.html" class="nav-link">
+          <span>♙</span>User Management
+        </a>
+
+        <a href="system-admin-toddlers.html" class="nav-link">
+          <span>▱</span>Toddlers Management
+        </a>
+
+        <a href="system-admin-sessions-badges.html" class="nav-link">
+          <span>♙</span>Sessions and Badges
+        </a>
+
+        <a href="system-admin-recordings.html" class="nav-link">
+          <span>▰</span>Recording Library
+        </a>
+
+        <a href="system-admin-news-content-sources.html" class="nav-link active">
+          <span>☷</span>News & Content Management
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>▣</span>Logs
+        </a>
+      </nav>
+
+      <div class="admin-mini-card">
+        <div class="avatar" id="sidebarInitials">HF</div>
+
+        <div class="admin-text">
+          <strong id="sidebarName">Hifza Fayyaz</strong>
+          <span>Super Admin</span>
+        </div>
+
+        <button class="logout-icon" id="logoutBtn" type="button">⇥</button>
+      </div>
+
+      <div class="health-pill">
+        <span></span>
+        System Healthy
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button">☰</button>
+
+        <div class="page-title">
+          <h2>News & Content Management</h2>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search system resources..." />
+          </label>
+
+          <button class="icon-button" type="button">♧</button>
+          <button class="icon-button" type="button">⚙</button>
+          <button class="create-user-btn" type="button">＋ Create User</button>
+        </div>
+      </header>
+
+      <section class="news-page">
+        <div class="news-tabs">
+          <button class="tab active" type="button">News Sources <span>24</span></button>
+          <button class="tab" type="button">AI Summaries <span>156</span></button>
+        </div>
+
+        <section class="rules-card">
+          <div class="rules-left">
+            <h3>Scraping Engine Rules</h3>
+
+            <div class="rules-grid">
+              <div>
+                <p>Historical Window</p>
+
+                <div class="window-buttons">
+                  <button type="button">24h</button>
+                  <button class="active" type="button">7d</button>
+                  <button type="button">30d</button>
+                  <button type="button">90d</button>
+                </div>
+              </div>
+
+              <div>
+                <p>Processing Priority</p>
+
+                <input type="text" value="Standard Distribution" readonly />
+              </div>
+            </div>
+          </div>
+
+          <div class="rules-right">
+            <a href="#">Configure Advanced Rules</a>
+
+            <div class="scraped-box">
+              <p>Articles Scraped (7d)</p>
+              <h2>5,495</h2>
+              <span>+12% from last period</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="filters-row">
+          <label class="source-search">
+            <span>⌕</span>
+            <input id="sourceSearch" type="search" placeholder="Search news sources..." />
+          </label>
+
+          <button class="filter-btn" type="button">Category⌄</button>
+          <button class="filter-btn" type="button">Status⌄</button>
+
+          <div class="filter-spacer"></div>
+
+          <button class="sync-btn" type="button">⟳ Sync All</button>
+          <button class="add-source-btn" type="button">＋ Add Source</button>
+        </div>
+
+        <section class="table-card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Source Name</th>
+                  <th>Category</th>
+                  <th>Status</th>
+                  <th>Articles</th>
+                  <th>Last Sync</th>
+                  <th>Frequency</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody id="sourcesTableBody">
+                <tr>
+                  <td>
+                    <div class="source-cell">
+                      <div class="source-icon">☷</div>
+                      <div>
+                        <strong>EdTech News Daily</strong>
+                        <span>https://edtechnews.com/feed</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td><span class="category">Education Technology</span></td>
+                  <td><span class="status active">◎ Active</span></td>
+                  <td>1,248</td>
+                  <td>2 mins ago</td>
+                  <td>Every 30 mins</td>
+                  <td><button class="action-btn" type="button">⚙</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="source-cell">
+                      <div class="source-icon">☷</div>
+                      <div>
+                        <strong>Early Childhood Today</strong>
+                        <span>https://earlychildhoodtoday.com/rss</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td><span class="category">Early Learning</span></td>
+                  <td><span class="status active">◎ Active</span></td>
+                  <td>892</td>
+                  <td>5 mins ago</td>
+                  <td>Every hour</td>
+                  <td><button class="action-btn" type="button">⚙</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="source-cell">
+                      <div class="source-icon">☷</div>
+                      <div>
+                        <strong>Parent & Child Magazine</strong>
+                        <span>https://parentandchild.com/feed</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td><span class="category">Parenting</span></td>
+                  <td><span class="status error">⊗ Error</span></td>
+                  <td>543</td>
+                  <td>3 hours ago</td>
+                  <td>Every 2 hours</td>
+                  <td><button class="action-btn" type="button">⚙</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="source-cell">
+                      <div class="source-icon">☷</div>
+                      <div>
+                        <strong>Learning & Development Journal</strong>
+                        <span>https://ldjournal.com/rss</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td><span class="category">Child Development</span></td>
+                  <td><span class="status active">◎ Active</span></td>
+                  <td>2,134</td>
+                  <td>1 min ago</td>
+                  <td>Every 15 mins</td>
+                  <td><button class="action-btn" type="button">⚙</button></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="source-cell">
+                      <div class="source-icon">☷</div>
+                      <div>
+                        <strong>School Management Insights</strong>
+                        <span>https://schoolinsights.com/feed</span>
+                      </div>
+                    </div>
+                  </td>
+
+                  <td><span class="category">Administration</span></td>
+                  <td><span class="status paused">◷ Paused</span></td>
+                  <td>678</td>
+                  <td>1 day ago</td>
+                  <td>Daily</td>
+                  <td><button class="action-btn" type="button">⚙</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-footer">
+            <p>Showing 1 to 5 of 24 sources</p>
+
+            <div class="pagination">
+              <button type="button">Previous</button>
+              <button type="button" class="active">1</button>
+              <button type="button">2</button>
+              <button type="button">Next</button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/system-admin-news-content-sources.js"></script>
+</body>
+</html>
