@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | System Logs</title>
+  <link rel="stylesheet" href="./css/system-admin-logs.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">▣</div>
+
+        <div>
+          <h1>Tiny2Wise</h1>
+          <p>Voice Across Generations</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="system-admin-dashboard.html" class="nav-link">
+          <span>⌘</span>Dashboard
+        </a>
+
+        <a href="system-admin-users.html" class="nav-link">
+          <span>♙</span>User Management
+        </a>
+
+        <a href="system-admin-toddlers.html" class="nav-link">
+          <span>▱</span>Toddlers Management
+        </a>
+
+        <a href="system-admin-sessions-badges.html" class="nav-link">
+          <span>♙</span>Sessions and Badges
+        </a>
+
+        <a href="system-admin-recordings.html" class="nav-link">
+          <span>▰</span>Recording Library
+        </a>
+
+        <a href="system-admin-news-content-sources.html" class="nav-link">
+          <span>☷</span>News & Content Management
+        </a>
+
+        <a href="system-admin-logs.html" class="nav-link active">
+          <span>▣</span>Logs
+        </a>
+      </nav>
+
+      <div class="admin-mini-card">
+        <div class="avatar" id="sidebarInitials">HF</div>
+
+        <div class="admin-text">
+          <strong id="sidebarName">Hifza Fayyaz</strong>
+          <span>Super Admin</span>
+        </div>
+
+        <button class="logout-icon" id="logoutBtn" type="button">⇥</button>
+      </div>
+
+      <div class="health-pill">
+        <span></span>
+        System Healthy
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button">☰</button>
+
+        <div class="page-title">
+          <h2>System Logs</h2>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search system resources..." />
+          </label>
+
+          <button class="icon-button" type="button">♧</button>
+          <button class="icon-button" type="button">⚙</button>
+          <button class="create-user-btn" type="button">＋ Create User</button>
+        </div>
+      </header>
+
+      <section class="logs-page">
+        <div class="log-tabs">
+          <button class="tab active" type="button">All Events <span>842</span></button>
+          <button class="tab" type="button">Security & Auth <span>234</span></button>
+          <button class="tab" type="button">AI Model Logs <span>156</span></button>
+          <button class="tab" type="button">Infrastructure <span>452</span></button>
+        </div>
+
+        <div class="range-row">
+          <label>
+            Time Range:
+            <input type="text" />
+          </label>
+
+          <button class="export-btn" type="button">⇩ Export Logs</button>
+        </div>
+
+        <div class="filters-row">
+          <label class="log-search">
+            <span>⌕</span>
+            <input
+              id="logSearch"
+              type="search"
+              placeholder="Search logs by user, action, resource, or IP..."
+            />
+          </label>
+
+          <button class="filter-btn" type="button">Type⌄</button>
+          <button class="filter-btn" type="button">Severity⌄</button>
+          <button class="filter-btn" type="button">User⌄</button>
+        </div>
+
+        <section class="table-card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>User</th>
+                  <th>Action</th>
+                  <th>Resource</th>
+                  <th>IP Address</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+
+              <tbody id="logsTableBody">
+                <tr>
+                  <td>Jan 11, 2026 14:32:18</td>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=12" alt="User" />
+                      <span>Dr. M Adnan</span>
+                    </div>
+                  </td>
+                  <td><span class="action success">◎ Login Success</span></td>
+                  <td>User Auth #4821</td>
+                  <td>192.168.1.45</td>
+                  <td><a href="#">View Details</a></td>
+                </tr>
+
+                <tr>
+                  <td>Jan 11, 2026 14:28:52</td>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=13" alt="User" />
+                      <span>Suneela Hameed</span>
+                    </div>
+                  </td>
+                  <td><span class="action failed">⊗ Failed Login</span></td>
+                  <td>User Auth #4820</td>
+                  <td>203.45.67.89</td>
+                  <td><a href="#">View Details</a></td>
+                </tr>
+
+                <tr>
+                  <td>Jan 11, 2026 14:25:33</td>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=14" alt="User" />
+                      <span>Zarmina Jahangir</span>
+                    </div>
+                  </td>
+                  <td><span class="action info">◎ Data Export</span></td>
+                  <td>Report #7642</td>
+                  <td>192.168.1.22</td>
+                  <td><a href="#">View Details</a></td>
+                </tr>
+
+                <tr>
+                  <td>Jan 11, 2026 14:22:14</td>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=15" alt="User" />
+                      <span>Shehroz Ali</span>
+                    </div>
+                  </td>
+                  <td><span class="action success">◎ User Created</span></td>
+                  <td>User #2847</td>
+                  <td>192.168.1.45</td>
+                  <td><a href="#">View Details</a></td>
+                </tr>
+
+                <tr>
+                  <td>Jan 11, 2026 14:18:47</td>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=16" alt="User" />
+                      <span>Umair Hameed</span>
+                    </div>
+                  </td>
+                  <td><span class="action warning">◷ Permission Changed</span></td>
+                  <td>User #2831</td>
+                  <td>192.168.1.67</td>
+                  <td><a href="#">View Details</a></td>
+                </tr>
+
+                <tr>
+                  <td>Jan 11, 2026 14:15:29</td>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=17" alt="User" />
+                      <span>Javeria Asif</span>
+                    </div>
+                  </td>
+                  <td><span class="action info">◎ Database Backup</span></td>
+                  <td>Backup #1284</td>
+                  <td>10.0.0.1</td>
+                  <td><a href="#">View Details</a></td>
+                </tr>
+
+                <tr>
+                  <td>Jan 11, 2026 14:12:05</td>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=18" alt="User" />
+                      <span>Ibrahim Ijaz</span>
+                    </div>
+                  </td>
+                  <td><span class="action info">◎ AI Model Run</span></td>
+                  <td>Model #AI-5612</td>
+                  <td>192.168.1.78</td>
+                  <td><a href="#">View Details</a></td>
+                </tr>
+
+                <tr>
+                  <td>Jan 11, 2026 14:08:41</td>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=19" alt="User" />
+                      <span>Hamza Ali</span>
+                    </div>
+                  </td>
+                  <td><span class="action success">◎ Session Created</span></td>
+                  <td>Session #9234</td>
+                  <td>192.168.1.92</td>
+                  <td><a href="#">View Details</a></td>
+                </tr>
+
+                <tr>
+                  <td>Jan 11, 2026 14:05:17</td>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=20" alt="User" />
+                      <span>Saif ur Rehman</span>
+                    </div>
+                  </td>
+                  <td><span class="action warning">◷ API Key Generated</span></td>
+                  <td>API Key #7821</td>
+                  <td>192.168.1.55</td>
+                  <td><a href="#">View Details</a></td>
+                </tr>
+
+                <tr>
+                  <td>Jan 11, 2026 14:01:53</td>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=21" alt="User" />
+                      <span>Ali Junaid</span>
+                    </div>
+                  </td>
+                  <td><span class="action success">◎ File Uploaded</span></td>
+                  <td>File #4521</td>
+                  <td>192.168.1.34</td>
+                  <td><a href="#">View Details</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-footer">
+            <p>Showing 1 to 10 of 842 logs</p>
+
+            <div class="pagination">
+              <button type="button">Previous</button>
+              <button type="button" class="active">1</button>
+              <button type="button">2</button>
+              <button type="button">3</button>
+              <span>...</span>
+              <button type="button">85</button>
+              <button type="button">Next</button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/system-admin-logs.js"></script>
+</body>
+</html>
