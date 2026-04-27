@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | Sessions and Badges</title>
+  <link rel="stylesheet" href="./css/system-admin-sessions-badges.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">▣</div>
+
+        <div>
+          <h1>Tiny2Wise</h1>
+          <p>Voice Across Generations</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="system-admin-dashboard.html" class="nav-link">
+          <span>⌘</span>Dashboard
+        </a>
+
+        <a href="system-admin-users.html" class="nav-link">
+          <span>♙</span>User Management
+        </a>
+
+        <a href="system-admin-toddlers.html" class="nav-link">
+          <span>▱</span>Toddlers Management
+        </a>
+
+        <a href="system-admin-sessions-badges.html" class="nav-link active">
+          <span>♙</span>Sessions and Badges
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>▰</span>Recording Library
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>☷</span>News & Content
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>▣</span>Logs
+        </a>
+      </nav>
+
+      <div class="admin-mini-card">
+        <div class="avatar" id="sidebarInitials">HF</div>
+
+        <div class="admin-text">
+          <strong id="sidebarName">Hifza Fayyaz</strong>
+          <span>Super Admin</span>
+        </div>
+
+        <button class="logout-icon" id="logoutBtn" type="button">⇥</button>
+      </div>
+
+      <div class="health-pill">
+        <span></span>
+        System Healthy
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button">☰</button>
+
+        <div class="page-title">
+          <h2>Sessions and Badges</h2>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search system resources..." />
+          </label>
+
+          <button class="icon-button" type="button">♧</button>
+          <button class="icon-button" type="button">⚙</button>
+          <button class="create-user-btn" type="button">＋ Create User</button>
+        </div>
+      </header>
+
+      <section class="sessions-page">
+        <section class="summary-grid">
+          <article class="summary-card">
+            <div class="summary-icon blue">◷</div>
+            <h3>1,248</h3>
+            <p>Total Learning Hours</p>
+            <span>This month <strong class="green-text">+12%</strong></span>
+          </article>
+
+          <article class="summary-card wide-card">
+            <div class="summary-icon green">↗</div>
+            <h3>Ameer Salaar</h3>
+            <p>Most Active Toddler</p>
+            <span>42 hours logged <strong class="green-text">Top learner</strong></span>
+          </article>
+
+          <article class="summary-card">
+            <div class="summary-icon orange">☆</div>
+            <h3>156</h3>
+            <p>Badges Earned</p>
+            <span>Across all toddlers <strong class="green-text">+23%</strong></span>
+          </article>
+
+          <article class="summary-card">
+            <div class="summary-icon purple">♙</div>
+            <h3>18</h3>
+            <p>Active Teachers</p>
+            <span>Currently teaching <strong class="green-text">6 online now</strong></span>
+          </article>
+        </section>
+
+        <div class="session-tabs">
+          <button class="tab active" type="button">All Sessions <span>542</span></button>
+          <button class="tab" type="button">Ongoing <span>28</span></button>
+          <button class="tab" type="button">Completed <span>296</span></button>
+          <button class="tab" type="button">Scheduled <span>16</span></button>
+        </div>
+
+        <div class="filters-row">
+          <label class="session-search">
+            <span>⌕</span>
+            <input id="sessionSearch" type="search" placeholder="Search sessions..." />
+          </label>
+
+          <button class="filter-btn" type="button">Activity⌄</button>
+          <button class="filter-btn" type="button">Teacher⌄</button>
+          <button class="filter-btn" type="button">▽ More Filters</button>
+
+          <div class="filter-spacer"></div>
+
+          <button class="export-btn" type="button">⇩ Export</button>
+          <button class="log-session-btn" type="button">＋ Log Session</button>
+        </div>
+
+        <section class="table-card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Toddler</th>
+                  <th>Activity</th>
+                  <th>Teacher</th>
+                  <th>Duration</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Badge Earned</th>
+                </tr>
+              </thead>
+
+              <tbody id="sessionsTableBody">
+                <tr>
+                  <td>
+                    <div class="toddler-cell">
+                      <img src="https://i.pravatar.cc/80?img=47" alt="Toddler" />
+                      <span>Ameer Salaar</span>
+                    </div>
+                  </td>
+
+                  <td>Story Time</td>
+                  <td>Zarmina Jahangir</td>
+                  <td>45 mins</td>
+                  <td>Jan 11, 2024</td>
+                  <td><span class="status completed">● Completed</span></td>
+                  <td><span class="earned">★ Reading Star</span></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="toddler-cell">
+                      <img src="https://i.pravatar.cc/80?img=45" alt="Toddler" />
+                      <span>Suriya Zainab</span>
+                    </div>
+                  </td>
+
+                  <td>Art & Crafts</td>
+                  <td>Javeria Asif</td>
+                  <td>30 mins</td>
+                  <td>Jan 11, 2024</td>
+                  <td><span class="status ongoing">● Ongoing</span></td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="toddler-cell">
+                      <img src="https://i.pravatar.cc/80?img=12" alt="Toddler" />
+                      <span>M. Saaid</span>
+                    </div>
+                  </td>
+
+                  <td>Music Time</td>
+                  <td>Umer Rehman</td>
+                  <td>25 mins</td>
+                  <td>Jan 10, 2024</td>
+                  <td><span class="status completed">● Completed</span></td>
+                  <td><span class="earned">★ Music Maker</span></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="toddler-cell">
+                      <img src="https://i.pravatar.cc/80?img=33" alt="Toddler" />
+                      <span>Saim Ali</span>
+                    </div>
+                  </td>
+
+                  <td>Outdoor Play</td>
+                  <td>Hamza Ali</td>
+                  <td>60 mins</td>
+                  <td>Jan 10, 2024</td>
+                  <td><span class="status scheduled">● Scheduled</span></td>
+                  <td>-</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="toddler-cell">
+                      <img src="https://i.pravatar.cc/80?img=40" alt="Toddler" />
+                      <span>Urooj Saif</span>
+                    </div>
+                  </td>
+
+                  <td>Building Blocks</td>
+                  <td>Ibrahim Ijaz</td>
+                  <td>35 mins</td>
+                  <td>Jan 9, 2024</td>
+                  <td><span class="status completed">● Completed</span></td>
+                  <td><span class="earned">★ Builder</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-footer">
+            <p>Showing 1 to 5 of 342 sessions</p>
+
+            <div class="pagination">
+              <button type="button">Previous</button>
+              <button type="button" class="active">1</button>
+              <button type="button">2</button>
+              <button type="button">3</button>
+              <span>...</span>
+              <button type="button">69</button>
+              <button type="button">Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="badges-section">
+          <div class="badges-heading">
+            <h3>Badge Catalog Highlights</h3>
+            <a href="#">View All Badges →</a>
+          </div>
+
+          <div class="badges-grid">
+            <article class="badge-card">
+              <div class="badge-circle safety">⭐</div>
+              <h4>Safety Star</h4>
+              <p>Awarded for following safety rules</p>
+              <span>♙ Earned by 45 toddlers</span>
+            </article>
+
+            <article class="badge-card">
+              <div class="badge-circle reading">🦅</div>
+              <h4>Reading Star</h4>
+              <p>Completed 10 story time sessions</p>
+              <span>♙ Earned by 32 toddlers</span>
+            </article>
+
+            <article class="badge-card">
+              <div class="badge-circle creative">🎨</div>
+              <h4>Creative Champion</h4>
+              <p>Mastered 5 different art activities</p>
+              <span>♙ Earned by 28 toddlers</span>
+            </article>
+
+            <article class="badge-card">
+              <div class="badge-circle friendship">🎖</div>
+              <h4>Friendship Award</h4>
+              <p>Great teamwork and sharing</p>
+              <span>♙ Earned by 51 toddlers</span>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/system-admin-sessions-badges.js"></script>
+</body>
+</html>
