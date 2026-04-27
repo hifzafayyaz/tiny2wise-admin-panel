@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | User Management</title>
+  <link rel="stylesheet" href="./css/system-admin-users.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">▣</div>
+
+        <div>
+          <h1>Tiny2Wise</h1>
+          <p>Voice Across Generations</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="system-admin-dashboard.html" class="nav-link">
+          <span>⌘</span>Dashboard
+        </a>
+
+        <a href="system-admin-users.html" class="nav-link active">
+          <span>♙</span>User Management
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>▱</span>Toddlers Management
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>♙</span>Sessions and Badges
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>▰</span>Recording Library
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>☷</span>News & Content
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>▣</span>Logs
+        </a>
+      </nav>
+
+      <div class="admin-mini-card">
+        <div class="avatar" id="sidebarInitials">HF</div>
+
+        <div class="admin-text">
+          <strong id="sidebarName">Hifza Fayyaz</strong>
+          <span>Super Admin</span>
+        </div>
+
+        <button class="logout-icon" id="logoutBtn" type="button">⇥</button>
+      </div>
+
+      <div class="health-pill">
+        <span></span>
+        System Healthy
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button">☰</button>
+
+        <div class="page-title">
+          <h2>User Management</h2>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search system resources..." />
+          </label>
+
+          <button class="icon-button" type="button">♧</button>
+          <button class="icon-button" type="button">⚙</button>
+          <button class="create-user-btn" type="button">＋ Create User</button>
+        </div>
+      </header>
+
+      <section class="users-page">
+        <div class="user-tabs">
+          <button class="tab active" type="button">
+            All Users <span>1234</span>
+          </button>
+
+          <button class="tab" type="button">
+            Active <span>987</span>
+          </button>
+
+          <button class="tab" type="button">
+            Inactive <span>147</span>
+          </button>
+
+          <button class="tab" type="button">
+            Suspended <span>23</span>
+          </button>
+        </div>
+
+        <div class="filters-row">
+          <label class="user-search">
+            <span>⌕</span>
+            <input id="userSearch" type="search" placeholder="Search users..." />
+          </label>
+
+          <button class="filter-btn" type="button">Role⌄</button>
+          <button class="filter-btn" type="button">Status⌄</button>
+          <button class="filter-btn date" type="button">▣ Date Range</button>
+
+          <div class="filter-spacer"></div>
+
+          <button class="export-btn" type="button">⇩ Export</button>
+          <button class="add-user-btn" type="button">＋ Add User</button>
+        </div>
+
+        <section class="table-card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                  <th>Join Date</th>
+                  <th>Last Active</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody id="usersTableBody">
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=31" alt="User" />
+                      <strong>Zarmina Jahangir</strong>
+                    </div>
+                  </td>
+
+                  <td>zarmina@tiny2wise.com</td>
+                  <td><span class="role teacher">Teacher</span></td>
+                  <td><span class="status active">● Active</span></td>
+                  <td>Jan 15, 2024</td>
+                  <td>2 mins ago</td>
+                  <td>
+                    <div class="actions">
+                      <button type="button" title="Edit">✎</button>
+                      <button type="button" title="Suspend">⊘</button>
+                      <button type="button" title="Delete">♲</button>
+                      <button type="button" title="More">⋮</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=47" alt="User" />
+                      <strong>Ameer Salaar</strong>
+                    </div>
+                  </td>
+
+                  <td>salaar@tiny2wise.com</td>
+                  <td><span class="role student">Student</span></td>
+                  <td><span class="status active">● Active</span></td>
+                  <td>Jan 10, 2024</td>
+                  <td>5 mins ago</td>
+                  <td>
+                    <div class="actions">
+                      <button type="button" title="Edit">✎</button>
+                      <button type="button" title="Suspend">⊘</button>
+                      <button type="button" title="Delete">♲</button>
+                      <button type="button" title="More">⋮</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=12" alt="User" />
+                      <strong>Adan Waheed</strong>
+                    </div>
+                  </td>
+
+                  <td>adan@admin.com</td>
+                  <td><span class="role admin">Admin</span></td>
+                  <td><span class="status active">● Active</span></td>
+                  <td>Dec 20, 2023</td>
+                  <td>1 hour ago</td>
+                  <td>
+                    <div class="actions">
+                      <button type="button" title="Edit">✎</button>
+                      <button type="button" title="Suspend">⊘</button>
+                      <button type="button" title="Delete">♲</button>
+                      <button type="button" title="More">⋮</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=33" alt="User" />
+                      <strong>Dr. Adnan Khan</strong>
+                    </div>
+                  </td>
+
+                  <td>dr.adnan@tiny2wise.com</td>
+                  <td><span class="role teacher">Teacher</span></td>
+                  <td><span class="status inactive">● Inactive</span></td>
+                  <td>Nov 5, 2023</td>
+                  <td>2 days ago</td>
+                  <td>
+                    <div class="actions">
+                      <button type="button" title="Edit">✎</button>
+                      <button type="button" title="Suspend">⊘</button>
+                      <button type="button" title="Delete">♲</button>
+                      <button type="button" title="More">⋮</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <img src="https://i.pravatar.cc/80?img=34" alt="User" />
+                      <strong>Ahmad Ijaz</strong>
+                    </div>
+                  </td>
+
+                  <td>ahmad@tiny2wise.com</td>
+                  <td><span class="role student">Student</span></td>
+                  <td><span class="status active">● Active</span></td>
+                  <td>Jan 8, 2024</td>
+                  <td>10 mins ago</td>
+                  <td>
+                    <div class="actions">
+                      <button type="button" title="Edit">✎</button>
+                      <button type="button" title="Suspend">⊘</button>
+                      <button type="button" title="Delete">♲</button>
+                      <button type="button" title="More">⋮</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-footer">
+            <p>Showing 1 to 5 of 1234 users</p>
+
+            <div class="pagination">
+              <button type="button">Previous</button>
+              <button type="button" class="active">1</button>
+              <button type="button">2</button>
+              <button type="button">3</button>
+              <span>...</span>
+              <button type="button">42</button>
+              <button type="button">Next</button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/system-admin-users.js"></script>
+</body>
+</html>

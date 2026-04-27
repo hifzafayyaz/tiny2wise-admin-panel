@@ -104,8 +104,10 @@ form.addEventListener("submit", async (e) => {
     localStorage.removeItem("systemAdminAuth");
     sessionStorage.removeItem("systemAdminAuth");
 
+    const storage =
+      fields.rememberMe && fields.rememberMe.checked ? localStorage : sessionStorage;
+
     if (result.data.role === "system-admin") {
-      const storage = fields.rememberMe && fields.rememberMe.checked ? localStorage : sessionStorage;
       storage.setItem("systemAdminAuth", JSON.stringify(result.data));
 
       messageBox.className = "form-message success";
@@ -119,7 +121,6 @@ form.addEventListener("submit", async (e) => {
       return;
     }
 
-    const storage = fields.rememberMe && fields.rememberMe.checked ? localStorage : sessionStorage;
     storage.setItem("principalAuth", JSON.stringify(result.data));
 
     messageBox.className = "form-message success";

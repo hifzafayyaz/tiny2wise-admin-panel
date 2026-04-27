@@ -34,7 +34,7 @@ const signupPrincipal = async (req, res) => {
     }
 
     const existingPrincipal = await Principal.findOne({
-      officialEmail: officialEmail.toLowerCase()
+      officialEmail: officialEmail.toLowerCase().trim()
     });
 
     if (existingPrincipal) {
@@ -49,7 +49,7 @@ const signupPrincipal = async (req, res) => {
     const principal = await Principal.create({
       fullName,
       schoolName,
-      officialEmail: officialEmail.toLowerCase(),
+      officialEmail: officialEmail.toLowerCase().trim(),
       contactNumber,
       password: hashedPassword
     });
