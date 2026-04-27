@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | Recording Library</title>
+  <link rel="stylesheet" href="./css/system-admin-recordings.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">▣</div>
+
+        <div>
+          <h1>Tiny2Wise</h1>
+          <p>Voice Across Generations</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="system-admin-dashboard.html" class="nav-link">
+          <span>⌘</span>Dashboard
+        </a>
+
+        <a href="system-admin-users.html" class="nav-link">
+          <span>♙</span>User Management
+        </a>
+
+        <a href="system-admin-toddlers.html" class="nav-link">
+          <span>▱</span>Toddlers Management
+        </a>
+
+        <a href="system-admin-sessions-badges.html" class="nav-link">
+          <span>♙</span>Sessions and Badges
+        </a>
+
+        <a href="system-admin-recordings.html" class="nav-link active">
+          <span>▰</span>Recording Library
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>☷</span>News & Content
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>▣</span>Logs
+        </a>
+      </nav>
+
+      <div class="admin-mini-card">
+        <div class="avatar" id="sidebarInitials">HF</div>
+
+        <div class="admin-text">
+          <strong id="sidebarName">Hifza Fayyaz</strong>
+          <span>Super Admin</span>
+        </div>
+
+        <button class="logout-icon" id="logoutBtn" type="button">⇥</button>
+      </div>
+
+      <div class="health-pill">
+        <span></span>
+        System Healthy
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button">☰</button>
+
+        <div class="page-title">
+          <h2>Recording Library</h2>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search system resources..." />
+          </label>
+
+          <button class="icon-button" type="button">♧</button>
+          <button class="icon-button" type="button">⚙</button>
+          <button class="create-user-btn" type="button">＋ Create User</button>
+        </div>
+      </header>
+
+      <section class="recordings-page">
+        <div class="recording-tabs">
+          <button class="tab active" type="button">All Recordings <span>842</span></button>
+          <button class="tab" type="button">Pending Review <span>28</span></button>
+          <button class="tab" type="button">Flagged <span>12</span></button>
+          <button class="tab" type="button">Approved <span>298</span></button>
+        </div>
+
+        <div class="category-pills">
+          <button type="button">Story Time</button>
+          <button type="button">Arts & Crafts</button>
+          <button type="button">Music</button>
+          <button type="button">Outdoor Play</button>
+          <button type="button">Building</button>
+          <button type="button">Nutrition</button>
+          <button type="button">Movement</button>
+          <button type="button">Science</button>
+        </div>
+
+        <section class="recording-grid">
+          <article class="recording-card">
+            <div class="video-thumb image-thumb">
+              <button class="play-circle" type="button">▷</button>
+              <span class="duration">2m 45s</span>
+            </div>
+
+            <h3>Morning Circle Time - Story Reading</h3>
+
+            <div class="teacher-line">
+              <img src="https://i.pravatar.cc/40?img=31" alt="Teacher" />
+              <span>Zarmina Jahangir</span>
+            </div>
+
+            <span class="status pending">◷ Pending Review</span>
+
+            <div class="action-grid">
+              <button type="button">◎ Approve</button>
+              <button type="button">⚐ Flag</button>
+              <button type="button">⊙ Review Fix</button>
+              <button class="play-btn" type="button">▷ Play</button>
+            </div>
+          </article>
+
+          <article class="recording-card">
+            <div class="video-thumb grey-thumb">
+              <button class="play-circle" type="button">▷</button>
+              <span class="duration">4m 12s</span>
+            </div>
+
+            <h3>Art & Crafts - Painting Session</h3>
+
+            <div class="teacher-line">
+              <img src="https://i.pravatar.cc/40?img=33" alt="Teacher" />
+              <span>Dr. M Adnan</span>
+            </div>
+
+            <span class="status approved">◎ Approved</span>
+
+            <div class="action-grid">
+              <button type="button">◎ Approve</button>
+              <button type="button">⚐ Flag</button>
+              <button type="button">⊙ Review Fix</button>
+              <button class="play-btn" type="button">▷ Play</button>
+            </div>
+          </article>
+
+          <article class="recording-card">
+            <div class="video-thumb image-thumb">
+              <button class="play-circle" type="button">▷</button>
+              <span class="duration">3m 30s</span>
+            </div>
+
+            <h3>Music Time - Rhythm Activities</h3>
+
+            <div class="teacher-line">
+              <img src="https://i.pravatar.cc/40?img=31" alt="Teacher" />
+              <span>Zarmina Jahangir</span>
+            </div>
+
+            <span class="status flagged">⚐ Flagged</span>
+
+            <div class="action-grid">
+              <button type="button">◎ Approve</button>
+              <button type="button">⚐ Flag</button>
+              <button type="button">⊙ Review Fix</button>
+              <button class="play-btn" type="button">▷ Play</button>
+            </div>
+          </article>
+
+          <article class="recording-card">
+            <div class="video-thumb grey-thumb">
+              <button class="play-circle" type="button">▷</button>
+              <span class="duration">5m 18s</span>
+            </div>
+
+            <h3>Outdoor Play - Nature Exploration</h3>
+
+            <div class="teacher-line">
+              <img src="https://i.pravatar.cc/40?img=32" alt="Teacher" />
+              <span>Javeria Asif</span>
+            </div>
+
+            <span class="status approved">◎ Approved</span>
+
+            <div class="action-grid">
+              <button type="button">◎ Approve</button>
+              <button type="button">⚐ Flag</button>
+              <button type="button">⊙ Review Fix</button>
+              <button class="play-btn" type="button">▷ Play</button>
+            </div>
+          </article>
+
+          <article class="recording-card">
+            <div class="video-thumb image-thumb">
+              <button class="play-circle" type="button">▷</button>
+              <span class="duration">3m 05s</span>
+            </div>
+
+            <h3>Building Blocks - Creative Construction</h3>
+
+            <div class="teacher-line">
+              <img src="https://i.pravatar.cc/40?img=34" alt="Teacher" />
+              <span>Ibrahim Ijaz</span>
+            </div>
+
+            <span class="status pending">◷ Pending Review</span>
+
+            <div class="action-grid">
+              <button type="button">◎ Approve</button>
+              <button type="button">⚐ Flag</button>
+              <button type="button">⊙ Review Fix</button>
+              <button class="play-btn" type="button">▷ Play</button>
+            </div>
+          </article>
+
+          <article class="recording-card">
+            <div class="video-thumb grey-thumb">
+              <button class="play-circle" type="button">▷</button>
+              <span class="duration">2m 20s</span>
+            </div>
+
+            <h3>Snack Time - Healthy Eating Discussion</h3>
+
+            <div class="teacher-line">
+              <img src="https://i.pravatar.cc/40?img=35" alt="Teacher" />
+              <span>Hamza Ali</span>
+            </div>
+
+            <span class="status approved">◎ Approved</span>
+
+            <div class="action-grid">
+              <button type="button">◎ Approve</button>
+              <button type="button">⚐ Flag</button>
+              <button type="button">⊙ Review Fix</button>
+              <button class="play-btn" type="button">▷ Play</button>
+            </div>
+          </article>
+
+          <article class="recording-card">
+            <div class="video-thumb image-thumb">
+              <button class="play-circle" type="button">▷</button>
+              <span class="duration">4m 45s</span>
+            </div>
+
+            <h3>Dance & Movement - Exercise Fun</h3>
+
+            <div class="teacher-line">
+              <img src="https://i.pravatar.cc/40?img=32" alt="Teacher" />
+              <span>Javeria Asif</span>
+            </div>
+
+            <span class="status flagged">⚐ Flagged</span>
+
+            <div class="action-grid">
+              <button type="button">◎ Approve</button>
+              <button type="button">⚐ Flag</button>
+              <button type="button">⊙ Review Fix</button>
+              <button class="play-btn" type="button">▷ Play</button>
+            </div>
+          </article>
+
+          <article class="recording-card">
+            <div class="video-thumb grey-thumb">
+              <button class="play-circle" type="button">▷</button>
+              <span class="duration">3m 55s</span>
+            </div>
+
+            <h3>Science Discovery - Water Play</h3>
+
+            <div class="teacher-line">
+              <img src="https://i.pravatar.cc/40?img=34" alt="Teacher" />
+              <span>Ibrahim Ijaz</span>
+            </div>
+
+            <span class="status approved">◎ Approved</span>
+
+            <div class="action-grid">
+              <button type="button">◎ Approve</button>
+              <button type="button">⚐ Flag</button>
+              <button type="button">⊙ Review Fix</button>
+              <button class="play-btn" type="button">▷ Play</button>
+            </div>
+          </article>
+        </section>
+
+        <div class="pagination centered">
+          <button type="button">Previous</button>
+          <button type="button" class="active">1</button>
+          <button type="button">2</button>
+          <button type="button">3</button>
+          <span>...</span>
+          <button type="button">43</button>
+          <button type="button">Next</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/system-admin-recordings.js"></script>
+</body>
+</html>
