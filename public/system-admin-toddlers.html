@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny2Wise | Toddlers Management</title>
+  <link rel="stylesheet" href="./css/system-admin-toddlers.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">▣</div>
+
+        <div>
+          <h1>Tiny2Wise</h1>
+          <p>Voice Across Generations</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="system-admin-dashboard.html" class="nav-link">
+          <span>⌘</span>Dashboard
+        </a>
+
+        <a href="system-admin-users.html" class="nav-link">
+          <span>♙</span>User Management
+        </a>
+
+        <a href="system-admin-toddlers.html" class="nav-link active">
+          <span>▱</span>Toddlers Management
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>♙</span>Sessions and Badges
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>▰</span>Recording Library
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>☷</span>News & Content
+        </a>
+
+        <a href="#" class="nav-link">
+          <span>▣</span>Logs
+        </a>
+      </nav>
+
+      <div class="admin-mini-card">
+        <div class="avatar" id="sidebarInitials">HF</div>
+
+        <div class="admin-text">
+          <strong id="sidebarName">Hifza Fayyaz</strong>
+          <span>Super Admin</span>
+        </div>
+
+        <button class="logout-icon" id="logoutBtn" type="button">⇥</button>
+      </div>
+
+      <div class="health-pill">
+        <span></span>
+        System Healthy
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" type="button">☰</button>
+
+        <div class="page-title">
+          <h2>Toddlers Management</h2>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" placeholder="Search system resources..." />
+          </label>
+
+          <button class="icon-button" type="button">♧</button>
+          <button class="icon-button" type="button">⚙</button>
+          <button class="create-user-btn" type="button">＋ Create User</button>
+        </div>
+      </header>
+
+      <section class="toddlers-page">
+        <div class="content-layout">
+          <div class="main-content">
+            <div class="toddler-tabs">
+              <button class="tab active" type="button">
+                All Toddlers <span>156</span>
+              </button>
+
+              <button class="tab" type="button">
+                Active Consents <span>142</span>
+              </button>
+
+              <button class="tab" type="button">
+                Pending <span>8</span>
+              </button>
+
+              <button class="tab" type="button">
+                Expired <span>6</span>
+              </button>
+            </div>
+
+            <div class="filters-row">
+              <label class="toddler-search">
+                <span>⌕</span>
+                <input id="toddlerSearch" type="search" placeholder="Search toddlers..." />
+              </label>
+
+              <button class="filter-btn" type="button">Age⌄</button>
+              <button class="filter-btn" type="button">Badge⌄</button>
+              <button class="filter-btn" type="button">Status⌄</button>
+              <button class="export-btn" type="button">⇩ Export</button>
+              <button class="add-toddler-btn" type="button">＋ Add Toddler</button>
+            </div>
+
+            <section class="table-card">
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Toddler Name</th>
+                      <th>Parent</th>
+                      <th>Age</th>
+                      <th>Badge</th>
+                      <th>Consent<br />Status</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="toddlersTableBody">
+                    <tr class="highlighted">
+                      <td>
+                        <div class="toddler-cell">
+                          <img src="https://i.pravatar.cc/80?img=47" alt="Toddler" />
+                          <strong>Ameer Salaar</strong>
+                        </div>
+                      </td>
+
+                      <td>Shehroz Ali</td>
+                      <td>1.5 years</td>
+                      <td><span class="badge safety">Safety Star</span></td>
+                      <td><span class="status active">● Active</span></td>
+                      <td>
+                        <div class="actions">
+                          <button type="button" title="Edit">✎</button>
+                          <button type="button" title="View">⊙</button>
+                          <button type="button" title="More">⋮</button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="toddler-cell">
+                          <img src="https://i.pravatar.cc/80?img=45" alt="Toddler" />
+                          <strong>Suriya Zainab</strong>
+                        </div>
+                      </td>
+
+                      <td>Waheed<br />Akhtar</td>
+                      <td>2.5 years</td>
+                      <td><span class="badge explorer">Explorer</span></td>
+                      <td><span class="status active">● Active</span></td>
+                      <td>
+                        <div class="actions">
+                          <button type="button" title="Edit">✎</button>
+                          <button type="button" title="View">⊙</button>
+                          <button type="button" title="More">⋮</button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="toddler-cell">
+                          <img src="https://i.pravatar.cc/80?img=12" alt="Toddler" />
+                          <strong>M. Saaid</strong>
+                        </div>
+                      </td>
+
+                      <td>Umair<br />Hameed</td>
+                      <td>4 years</td>
+                      <td><span class="badge creative">Creative Star</span></td>
+                      <td><span class="status pending">● Pending</span></td>
+                      <td>
+                        <div class="actions">
+                          <button type="button" title="Edit">✎</button>
+                          <button type="button" title="View">⊙</button>
+                          <button type="button" title="More">⋮</button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="toddler-cell">
+                          <img src="https://i.pravatar.cc/80?img=33" alt="Toddler" />
+                          <strong>Saim Ali</strong>
+                        </div>
+                      </td>
+
+                      <td>Ali<br />Junaid</td>
+                      <td>3.5 years</td>
+                      <td><span class="badge friendship">Friendship</span></td>
+                      <td><span class="status active">● Active</span></td>
+                      <td>
+                        <div class="actions">
+                          <button type="button" title="Edit">✎</button>
+                          <button type="button" title="View">⊙</button>
+                          <button type="button" title="More">⋮</button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="toddler-cell">
+                          <img src="https://i.pravatar.cc/80?img=40" alt="Toddler" />
+                          <strong>Urooj Saif</strong>
+                        </div>
+                      </td>
+
+                      <td>Saif ur<br />Rehman</td>
+                      <td>2 years</td>
+                      <td><span class="badge helper">Helper</span></td>
+                      <td><span class="status active">● Active</span></td>
+                      <td>
+                        <div class="actions">
+                          <button type="button" title="Edit">✎</button>
+                          <button type="button" title="View">⊙</button>
+                          <button type="button" title="More">⋮</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="table-footer">
+                <p>Showing 1 to 5 of 156 toddlers</p>
+
+                <div class="pagination">
+                  <button type="button">Previous</button>
+                  <button type="button" class="active">1</button>
+                  <button type="button">2</button>
+                  <button type="button">3</button>
+                  <span>...</span>
+                  <button type="button">32</button>
+                  <button type="button">Next</button>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <aside class="consent-panel">
+            <div class="panel-header">
+              <h3>Consent Timeline</h3>
+              <button type="button">×</button>
+            </div>
+
+            <div class="child-summary">
+              <img src="https://i.pravatar.cc/80?img=47" alt="Toddler" />
+
+              <div>
+                <strong>Salaar Sikandar</strong>
+                <span>Parent: Shehroz Ali</span>
+              </div>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item done">
+                <div class="timeline-icon">✓</div>
+
+                <div>
+                  <strong>Mock Test</strong>
+                  <p>Jan 15, 2024 • Approved by Zarmina Jahangir</p>
+                </div>
+              </div>
+
+              <div class="timeline-item done">
+                <div class="timeline-icon">✓</div>
+
+                <div>
+                  <strong>Puzzle Game</strong>
+                  <p>Jan 10, 2024 • Approved by Zarmina Jahangir</p>
+                </div>
+              </div>
+
+              <div class="timeline-item done">
+                <div class="timeline-icon">✓</div>
+
+                <div>
+                  <strong>Story Telling</strong>
+                  <p>Jan 5, 2024 • Approved by Zarmina Jahangir</p>
+                </div>
+              </div>
+
+              <div class="timeline-item pending-line">
+                <div class="timeline-icon pending">⌕</div>
+
+                <div>
+                  <strong>Fun & Games</strong>
+                  <p>Pending approval</p>
+                </div>
+              </div>
+
+              <div class="timeline-item done">
+                <div class="timeline-icon">✓</div>
+
+                <div>
+                  <strong>Interactive Learning</strong>
+                  <p>Jan 1, 2024 • Approved by Zarmina Jahangir</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="request-btn" type="button">＋ Request New Consent</button>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/system-admin-toddlers.js"></script>
+</body>
+</html>
